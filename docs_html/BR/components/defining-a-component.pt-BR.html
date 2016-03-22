@@ -134,28 +134,83 @@
 </nav>
 <!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-application-initializers-item" class="level-2"><a id="-application-initializers-link" href="./BR/applications/initializers.pt-BR.html#-application-initializers" class="level-2" pref="#-application-initializers">Application Initializers</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="title-item" class="level-1"><a id="title-link" href="./BR/components/defining-a-component.pt-BR.html#title" class="level-1" pref="#title">{{title}}</a><ul class="level-2" id="title-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="title-hello-from-bar-item" class="level-3"><a id="title-hello-from-bar-link" href="./BR/components/defining-a-component.pt-BR.html#title-hello-from-bar" class="level-3" pref="#title-hello-from-bar">Hello from bar!</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/3b8cfadcd65ef09ff814deecd58b21b6dc0ca6ef">Mar 23, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Initializers provide an opportunity to configure your application as it boots.</p><p>There are two types of initializers: application initializers and application instance initializers.</p><p>Application initializers are run as your application boots, and provide the primary means to configure <a href="../dependency-injection">dependency injections</a> in your application.</p><p>Application instance initializers are run as an application instance is loaded. They provide a way to configure the initial state of your application, as well as to set up dependency injections that are local to the application instance (e.g. A/B testing configurations).</p><p>Operations performed in initializers should be kept as lightweight as possible to minimize delays in loading your application. Although advanced techniques exist for allowing asynchrony in application initializers (i.e. <code>deferReadiness</code> and <code>advanceReadiness</code>), these techniques should generally be avoided. Any asynchronous loading conditions (e.g. user authorization) are almost always better handled in your application route’s hooks, which allows for DOM interaction while waiting for conditions to resolve.</p><h2 id="-application-initializers">Application Initializers</h2><p>Application initializers can be created with Ember CLI’s <code>initializer</code> generator:</p><pre><code class="lang-bash prettyprint prettyprinted" style=""><span class="pln">ember generate initializer shopping</span><span class="pun">-</span><span class="pln">cart</span></code></pre><p>Let’s customize the <code>shopping-cart</code> initializer to inject a <code>cart</code> property into all the routes in your application:</p><p>```app/initializers/shopping-cart.js export function initialize(application) { application.inject(‘route’, ‘cart’, ‘service:shopping-cart’); };</p><p>export default { name: ‘shopping-cart’, initialize: initialize };</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">## Application Instance Initializers
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/3b8cfadcd65ef09ff814deecd58b21b6dc0ca6ef">Mar 23, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>To define a component, run:</p><pre><code class="lang-shell prettyprint prettyprinted" style=""><span class="pln">ember generate component </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">component</span><span class="pun">-</span><span class="pln">name</span></code></pre><p>Components must have at least one dash in their name. So <code>blog-post</code> is an acceptable name, and so is <code>audio-player-controls</code>, but <code>post</code> is not. This prevents clashes with current or future HTML element names, aligns Ember components with the W3C <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html">Custom Elements</a> spec, and ensures Ember detects the components automatically.</p><p>A sample component template could look like this:</p><p>```app/templates/components/blog-post.hbs </p><article class="blog-post"> <p></p>
+<h1 id="title">{{title}}</h1>
+<p>{{yield}}</p>
+<p>Edit title: {{input type=”text” value=title}}</p></article><p></p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">Given the above template, you can now use the `{{blog-post}}` component:
 
-Application instance initializers can be created with Ember CLI's `instance-initializer` generator:
+```app/templates/index.hbs
+{{#each model as |post|}}
+  {{#blog-post title=post.title}}
+    {{post.body}}
+  {{/blog-post}}
+{{/each}}</span></code></pre><p>Its model is populated in <code>model</code> hook in the route handler:</p><p>```app/routes/index.js export default Ember.Route.extend({ model() { return this.store.findAll(‘post’); } });</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">Each component, under the hood, is backed by an element. By default
+Ember will use a `</span><span class="tag">&lt;div&gt;</span><span class="pln">` element to contain your component's template.
+To learn how to change the element Ember uses for your component, see
+[Customizing a Component's
+Element](../customizing-a-components-element).
 
-```bash
-ember generate instance-initializer logger</span></code></pre><p>Let’s add some simple logging to indicate that the instance has booted:</p><p>```app/instance-initializers/logger.js export function initialize(applicationInstance) { var logger = applicationInstance.lookup(‘logger:main’); logger.log(‘Hello from the instance initializer!’); }</p><p>export default { name: ‘logger’, initialize: initialize };</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">## Specifying Initializer Order
 
-If you'd like to control the order in which initializers run, you can use the `before` and/or `after` options:
+## Defining a Component Subclass
 
-```app/initializers/config-reader.js
-export function initialize(application) {
-  // ... your code ...
-};
+Often times, your components will just encapsulate certain snippets of
+Handlebars templates that you find yourself using over and over. In
+those cases, you do not need to write any JavaScript at all. Define
+the Handlebars template as described above and use the component that is
+created.
 
-export default {
-  name: 'configReader',
-  before: 'websocketInit',
-  initialize: initialize
-};</span></code></pre><p>```app/initializers/websocket-init.js export function initialize(application) { // … your code … };</p><p>export default { name: ‘websocketInit’, after: ‘configReader’, initialize: initialize }; ```</p><p>Note that ordering only applies to initializers of the same type (i.e. application or application instance). Application initializers will always run before application instance initializers.</p></div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/BR/applications/initializers.pt-BR.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/BR/applications/initializers.pt-BR.md">
+If you need to customize the behavior of the component you'll
+need to define a subclass of [`Ember.Component`][1]. For example, you would
+need a custom subclass if you wanted to change a component's element,
+respond to actions from the component's template, or manually make
+changes to the component's element using JavaScript.
+
+[1]: http://emberjs.com/api/classes/Ember.Component.html
+
+Ember knows which subclass powers a component based on its filename. For
+example, if you have a component called `blog-post`, you would create a
+file at `app/components/blog-post.js`. If your component was called
+`audio-player-controls`, the file name would be at
+`app/components/audio-player-controls.js`.
+
+## Dynamically rendering a component
+
+The [`{{component}}`][2] helper can be used to defer the selection of a component to
+run time. The `{{my-component}}` syntax always renders the same component,
+while using the `{{component}}` helper allows choosing a component to render on
+the fly. This is useful in cases where you want to interact with different
+external libraries depending on the data. Using the `{{component}}` helper would
+allow you to keep different logic well separated.
+
+The first parameter of the helper is the name of a component to render, as a
+string. So `{{component 'blog-post'}}` is the same as using `{{blog-post}}`.
+
+The real value of [`{{component}}`][2] comes from being able to dynamically pick
+the component being rendered. Below is an example of using the helper as a
+means of choosing different components for displaying different kinds of posts:
+
+[2]: http://emberjs.com/api/classes/Ember.Templates.helpers.html#method_component
+
+```app/templates/components/foo-component.hbs
+</span><span class="tag">&lt;h3&gt;</span><span class="pln">Hello from foo!</span><span class="tag">&lt;/h3&gt;</span><span class="pln">
+</span><span class="tag">&lt;p&gt;</span><span class="pln">{{post.body}}</span><span class="tag">&lt;/p&gt;</span></code></pre><p>```app/templates/components/bar-component.hbs </p><h3 id="title-hello-from-bar">Hello from bar!</h3><div>
+  {{post.author}}
+</div><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">```app/routes/index.js
+export default Ember.Route.extend({
+  model() {
+    return this.store.findAll('post');
+  }
+});
+
+
+app/templates/index.hbs
+{{#each model as |post|}}
+  {{!-- either foo-component or bar-component --}}
+  {{component post.componentName post=post}}
+{{/each}}</span></code></pre><p>When the parameter passed to <code>{{component}}</code> evaluates to <code>null</code> or <code>undefined</code>, the helper renders nothing. When the parameter changes, the currently rendered component is destroyed and the new component is created and brought in.</p><p>Picking different components to render in response to the data allows you to have different template and behavior for each case. The <code>{{component}}</code> helper is a powerful tool for improving code modularity.</p></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/BR/components/defining-a-component.pt-BR.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/BR/components/defining-a-component.pt-BR.md">
     <span class="fa fa-pencil"> Edit</span>
   </a><!-- end ngIf: docbaseOptions.method == 'github' -->
 </div><!-- end ngIf: !index -->

@@ -22,136 +22,6 @@ var docbaseConfig = {
   "flatdocHtml": "./bower_components/docbase/html/flatdoc.html",
   "html5mode": false,
   "versions": {
-    "A1": [
-      {
-        "label": "applications",
-        "name": "applications",
-        "files": [
-          {
-            "name": "applications-and-instances",
-            "label": "applications-and-instances"
-          },
-          {
-            "name": "dependency-injection",
-            "label": "dependency-injection"
-          },
-          {
-            "name": "initializers",
-            "label": "initializers"
-          },
-          {
-            "name": "run-loop",
-            "label": "run-loop"
-          },
-          {
-            "name": "services",
-            "label": "services"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "components",
-        "name": "components",
-        "files": [
-          {
-            "name": "customizing-a-components-element",
-            "label": "customizing-a-components-element"
-          },
-          {
-            "name": "defining-a-component",
-            "label": "defining-a-component"
-          },
-          {
-            "name": "handling-events",
-            "label": "handling-events"
-          },
-          {
-            "name": "passing-properties-to-a-component",
-            "label": "passing-properties-to-a-component"
-          },
-          {
-            "name": "the-component-lifecycle",
-            "label": "the-component-lifecycle"
-          },
-          {
-            "name": "triggering-changes-with-actions",
-            "label": "triggering-changes-with-actions"
-          },
-          {
-            "name": "wrapping-content-in-a-component",
-            "label": "wrapping-content-in-a-component"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "configuring-ember",
-        "name": "configuring-ember",
-        "files": [
-          {
-            "name": "configuring-ember-cli",
-            "label": "configuring-ember-cli"
-          },
-          {
-            "name": "configuring-your-app",
-            "label": "configuring-your-app"
-          },
-          {
-            "name": "debugging",
-            "label": "debugging"
-          },
-          {
-            "name": "disabling-prototype-extensions",
-            "label": "disabling-prototype-extensions"
-          },
-          {
-            "name": "embedding-applications",
-            "label": "embedding-applications"
-          },
-          {
-            "name": "feature-flags",
-            "label": "feature-flags"
-          },
-          {
-            "name": "handling-deprecations",
-            "label": "handling-deprecations"
-          },
-          {
-            "name": "specifying-url-type",
-            "label": "specifying-url-type"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "contributing",
-        "name": "contributing",
-        "files": [
-          {
-            "name": "adding-new-features",
-            "label": "adding-new-features"
-          },
-          {
-            "name": "repositories",
-            "label": "repositories"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      }
-    ],
     "BR": [
       {
         "label": "applications",
@@ -274,6 +144,136 @@ var docbaseConfig = {
           {
             "name": "repositories.pt-BR",
             "label": "repositories.pt-BR"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      }
+    ],
+    "EN": [
+      {
+        "label": "applications",
+        "name": "applications",
+        "files": [
+          {
+            "name": "applications-and-instances",
+            "label": "applications-and-instances"
+          },
+          {
+            "name": "dependency-injection",
+            "label": "dependency-injection"
+          },
+          {
+            "name": "initializers",
+            "label": "initializers"
+          },
+          {
+            "name": "run-loop",
+            "label": "run-loop"
+          },
+          {
+            "name": "services",
+            "label": "services"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "components",
+        "name": "components",
+        "files": [
+          {
+            "name": "customizing-a-components-element",
+            "label": "customizing-a-components-element"
+          },
+          {
+            "name": "defining-a-component",
+            "label": "defining-a-component"
+          },
+          {
+            "name": "handling-events",
+            "label": "handling-events"
+          },
+          {
+            "name": "passing-properties-to-a-component",
+            "label": "passing-properties-to-a-component"
+          },
+          {
+            "name": "the-component-lifecycle",
+            "label": "the-component-lifecycle"
+          },
+          {
+            "name": "triggering-changes-with-actions",
+            "label": "triggering-changes-with-actions"
+          },
+          {
+            "name": "wrapping-content-in-a-component",
+            "label": "wrapping-content-in-a-component"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "configuring-ember",
+        "name": "configuring-ember",
+        "files": [
+          {
+            "name": "configuring-ember-cli",
+            "label": "configuring-ember-cli"
+          },
+          {
+            "name": "configuring-your-app",
+            "label": "configuring-your-app"
+          },
+          {
+            "name": "debugging",
+            "label": "debugging"
+          },
+          {
+            "name": "disabling-prototype-extensions",
+            "label": "disabling-prototype-extensions"
+          },
+          {
+            "name": "embedding-applications",
+            "label": "embedding-applications"
+          },
+          {
+            "name": "feature-flags",
+            "label": "feature-flags"
+          },
+          {
+            "name": "handling-deprecations",
+            "label": "handling-deprecations"
+          },
+          {
+            "name": "specifying-url-type",
+            "label": "specifying-url-type"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "contributing",
+        "name": "contributing",
+        "files": [
+          {
+            "name": "adding-new-features",
+            "label": "adding-new-features"
+          },
+          {
+            "name": "repositories",
+            "label": "repositories"
           },
           {
             "label": "index",

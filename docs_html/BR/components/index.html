@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc" class="no-literate">
+<body role="flatdoc">
   <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -132,34 +132,33 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
-  <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-application-initializers-item" class="level-2"><a id="-application-initializers-link" href="./BR/applications/initializers.pt-BR.html#-application-initializers" class="level-2" pref="#-application-initializers">Application Initializers</a></li></ul></li></ul></li></ul></div>
-  </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/3b8cfadcd65ef09ff814deecd58b21b6dc0ca6ef">Mar 23, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Initializers provide an opportunity to configure your application as it boots.</p><p>There are two types of initializers: application initializers and application instance initializers.</p><p>Application initializers are run as your application boots, and provide the primary means to configure <a href="../dependency-injection">dependency injections</a> in your application.</p><p>Application instance initializers are run as an application instance is loaded. They provide a way to configure the initial state of your application, as well as to set up dependency injections that are local to the application instance (e.g. A/B testing configurations).</p><p>Operations performed in initializers should be kept as lightweight as possible to minimize delays in loading your application. Although advanced techniques exist for allowing asynchrony in application initializers (i.e. <code>deferReadiness</code> and <code>advanceReadiness</code>), these techniques should generally be avoided. Any asynchronous loading conditions (e.g. user authorization) are almost always better handled in your application route’s hooks, which allows for DOM interaction while waiting for conditions to resolve.</p><h2 id="-application-initializers">Application Initializers</h2><p>Application initializers can be created with Ember CLI’s <code>initializer</code> generator:</p><pre><code class="lang-bash prettyprint prettyprinted" style=""><span class="pln">ember generate initializer shopping</span><span class="pun">-</span><span class="pln">cart</span></code></pre><p>Let’s customize the <code>shopping-cart</code> initializer to inject a <code>cart</code> property into all the routes in your application:</p><p>```app/initializers/shopping-cart.js export function initialize(application) { application.inject(‘route’, ‘cart’, ‘service:shopping-cart’); };</p><p>export default { name: ‘shopping-cart’, initialize: initialize };</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">## Application Instance Initializers
-
-Application instance initializers can be created with Ember CLI's `instance-initializer` generator:
-
-```bash
-ember generate instance-initializer logger</span></code></pre><p>Let’s add some simple logging to indicate that the instance has booted:</p><p>```app/instance-initializers/logger.js export function initialize(applicationInstance) { var logger = applicationInstance.lookup(‘logger:main’); logger.log(‘Hello from the instance initializer!’); }</p><p>export default { name: ‘logger’, initialize: initialize };</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">## Specifying Initializer Order
-
-If you'd like to control the order in which initializers run, you can use the `before` and/or `after` options:
-
-```app/initializers/config-reader.js
-export function initialize(application) {
-  // ... your code ...
-};
-
-export default {
-  name: 'configReader',
-  before: 'websocketInit',
-  initialize: initialize
-};</span></code></pre><p>```app/initializers/websocket-init.js export function initialize(application) { // … your code … };</p><p>export default { name: ‘websocketInit’, after: ‘configReader’, initialize: initialize }; ```</p><p>Note that ordering only applies to initializers of the same type (i.e. application or application instance). Application initializers will always run before application instance initializers.</p></div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/BR/applications/initializers.pt-BR.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/BR/applications/initializers.pt-BR.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
+<!-- ngIf: !index -->
+<!-- ngIf: index --><div class="index-container ng-scope" data-ng-if="index">
+	<div class="container">
+		<div class="row">
+			<h1 class="col-xs-12 ng-binding">
+				components
+			</h1>
+		</div>
+		<ul class="row">
+			<!-- ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./BR/components/customizing-a-components-element.pt-BR.html class="col-xs-12 ng-binding">customizing-a-components-element.pt-BR</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./BR/components/defining-a-component.pt-BR.html class="col-xs-12 ng-binding">defining-a-component.pt-BR</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./BR/components/handling-events.pt-BR.html class="col-xs-12 ng-binding">handling-events.pt-BR</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./BR/components/passing-properties-to-a-component.pt-BR.html class="col-xs-12 ng-binding">passing-properties-to-a-component.pt-BR</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./BR/components/the-component-lifecycle.pt-BR.html class="col-xs-12 ng-binding">the-component-lifecycle.pt-BR</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./BR/components/triggering-changes-with-actions.pt-BR.html class="col-xs-12 ng-binding">triggering-changes-with-actions.pt-BR</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./BR/components/wrapping-content-in-a-component.pt-BR.html class="col-xs-12 ng-binding">wrapping-content-in-a-component.pt-BR</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList -->
+		</ul>
+	</div>
+</div><!-- end ngIf: index -->
 </div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>

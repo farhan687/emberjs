@@ -134,28 +134,63 @@
 </nav>
 <!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-application-initializers-item" class="level-2"><a id="-application-initializers-link" href="./BR/applications/initializers.pt-BR.html#-application-initializers" class="level-2" pref="#-application-initializers">Application Initializers</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="title-item" class="level-1"><a id="title-link" href="./BR/components/passing-properties-to-a-component.pt-BR.html#title" class="level-1" pref="#title">{{title}}</a></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/3b8cfadcd65ef09ff814deecd58b21b6dc0ca6ef">Mar 23, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Initializers provide an opportunity to configure your application as it boots.</p><p>There are two types of initializers: application initializers and application instance initializers.</p><p>Application initializers are run as your application boots, and provide the primary means to configure <a href="../dependency-injection">dependency injections</a> in your application.</p><p>Application instance initializers are run as an application instance is loaded. They provide a way to configure the initial state of your application, as well as to set up dependency injections that are local to the application instance (e.g. A/B testing configurations).</p><p>Operations performed in initializers should be kept as lightweight as possible to minimize delays in loading your application. Although advanced techniques exist for allowing asynchrony in application initializers (i.e. <code>deferReadiness</code> and <code>advanceReadiness</code>), these techniques should generally be avoided. Any asynchronous loading conditions (e.g. user authorization) are almost always better handled in your application route’s hooks, which allows for DOM interaction while waiting for conditions to resolve.</p><h2 id="-application-initializers">Application Initializers</h2><p>Application initializers can be created with Ember CLI’s <code>initializer</code> generator:</p><pre><code class="lang-bash prettyprint prettyprinted" style=""><span class="pln">ember generate initializer shopping</span><span class="pun">-</span><span class="pln">cart</span></code></pre><p>Let’s customize the <code>shopping-cart</code> initializer to inject a <code>cart</code> property into all the routes in your application:</p><p>```app/initializers/shopping-cart.js export function initialize(application) { application.inject(‘route’, ‘cart’, ‘service:shopping-cart’); };</p><p>export default { name: ‘shopping-cart’, initialize: initialize };</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">## Application Instance Initializers
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/3b8cfadcd65ef09ff814deecd58b21b6dc0ca6ef">Mar 23, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Components are isolated from their surroundings, so any data that the component needs has to be passed in.</p><p>For example, imagine you have a <code>blog-post</code> component that is used to display a blog post:</p><p>```app/templates/components/blog-post.hbs </p><article class="blog-post"> <p></p>
+<h1 id="title">{{title}}</h1>
+<p>{{body}}</p></article><p></p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">Now imagine we have the following template and route:
 
-Application instance initializers can be created with Ember CLI's `instance-initializer` generator:
+```app/routes/index.js
+export default Ember.Route.extend({
+  model() {
+    return this.store.findAll('post');
+  }
+});</span></code></pre><p>If we tried to use the component like this:</p><p>```app/templates/index.hbs {{#each model as |post|}} {{blog-post}} {{/each}}</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">The following HTML would be rendered:
 
-```bash
-ember generate instance-initializer logger</span></code></pre><p>Let’s add some simple logging to indicate that the instance has booted:</p><p>```app/instance-initializers/logger.js export function initialize(applicationInstance) { var logger = applicationInstance.lookup(‘logger:main’); logger.log(‘Hello from the instance initializer!’); }</p><p>export default { name: ‘logger’, initialize: initialize };</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">## Specifying Initializer Order
+```html
+</span><span class="tag">&lt;article</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"blog-post"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;h1&gt;&lt;/h1&gt;</span><span class="pln">
+  </span><span class="tag">&lt;p&gt;&lt;/p&gt;</span><span class="pln">
+</span><span class="tag">&lt;/article&gt;</span></code></pre><p>In order to make a property available to a component, you must pass it in like this:</p><p>```app/templates/index.hbs {{#each model as |post|}} {{blog-post title=post.title body=post.body}} {{/each}}</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">It is important to note that these properties stay in sync (technically
+known as being "bound"). That is, if the value of `componentProperty`
+changes in the component, `outerProperty` will be updated to reflect that
+change. The reverse is true as well.
 
-If you'd like to control the order in which initializers run, you can use the `before` and/or `after` options:
+## Positional Params
 
-```app/initializers/config-reader.js
-export function initialize(application) {
-  // ... your code ...
-};
+In addition to passing parameters in by name, you can pass them in by position.
+In other words, you can invoke the above component example like this:
 
-export default {
-  name: 'configReader',
-  before: 'websocketInit',
-  initialize: initialize
-};</span></code></pre><p>```app/initializers/websocket-init.js export function initialize(application) { // … your code … };</p><p>export default { name: ‘websocketInit’, after: ‘configReader’, initialize: initialize }; ```</p><p>Note that ordering only applies to initializers of the same type (i.e. application or application instance). Application initializers will always run before application instance initializers.</p></div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/BR/applications/initializers.pt-BR.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/BR/applications/initializers.pt-BR.md">
+```app/templates/index.hbs
+{{#each model as |post|}}
+  {{blog-post post.title post.body}}
+{{/each}}</span></code></pre><p>To set the component up to receive parameters this way, you need set the <a href="http://emberjs.com/api/classes/Ember.Component.html#property_positionalParams"><code>positionalParams</code></a> attribute in your component class.</p><p>```app/components/blog-post.js const BlogPostComponent = Ember.Component.extend({});</p><p>BlogPostComponent.reopenClass({ positionalParams: [‘title’, ‘body’] });</p><p>export default BlogPostComponent;</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">Then you can use the attributes in the component exactly as if they had been
+passed in like `{{blog-post title=post.title body=post.body}}`.
+
+Notice that the `positionalParams` property is added to the class as a
+static variable via `reopenClass`. Positional params are always declared on
+the component class and cannot be changed while an application runs.
+
+Alternatively, you can accept an arbitrary number of parameters by
+setting `positionalParams` to a string, e.g. `positionalParams: 'params'`. This
+will allow you to access those params as an array like so:
+
+```app/components/blog-post.js
+const BlogPostComponent = Ember.Component.extend({
+  title: Ember.computed('params.[]', function(){
+    return this.get('params')[0];
+  }),
+  body: Ember.computed('params.[]', function(){
+    return this.get('params')[1];
+  })
+});
+
+BlogPostComponent.reopenClass({
+  positionalParams: 'params'
+});
+
+export default BlogPostComponent;</span></code></pre></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/BR/components/passing-properties-to-a-component.pt-BR.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/BR/components/passing-properties-to-a-component.pt-BR.md">
     <span class="fa fa-pencil"> Edit</span>
   </a><!-- end ngIf: docbaseOptions.method == 'github' -->
 </div><!-- end ngIf: !index -->
