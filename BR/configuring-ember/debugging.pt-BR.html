@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width">
-  <base href="">
+  <base href="../../">
   <title>Documentation</title>
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -17,8 +17,8 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc">
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: 'html/navbar.html' --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="'html/navbar.html'"><div class="container-fluid ng-scope">
+<body role="flatdoc" class="no-literate">
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -106,18 +106,63 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div class="container-fluid push ng-scope">
-  <div class="row">
-    <div class="col-xs-12 landing">
-      <h1>Ember<b>js</b> documentation</h1>
-      Powered by appbase.io
-    </div>
-
-    <div class="col-xs-12 list">
-      <!-- ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/applications/index.html ng-bind="folder.label">applications</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/components/index.html ng-bind="folder.label">components</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/configuring-ember/index.html ng-bind="folder.label">configuring-ember</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/contributing/index.html ng-bind="folder.label">contributing</a><!-- end ngRepeat: folder in map[currentVersion] -->
-		</div>
+<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+  <div class="menubar fixed">
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-routing-item" class="level-2"><a id="-routing-link" href="./BR/configuring-ember/debugging.pt-BR.html#-routing" class="level-2" pref="#-routing">Routing</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-controllers-item" class="level-2"><a id="-controllers-link" href="./BR/configuring-ember/debugging.pt-BR.html#-controllers" class="level-2" pref="#-controllers">Controllers</a></li></ul></li></ul></li></ul></div>
   </div>
-</div>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/3b8cfadcd65ef09ff814deecd58b21b6dc0ca6ef">Mar 22, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Ember provides several configuration options that can help you debug problems with your application.</p><h2 id="-routing">Routing</h2><h4>Log router transitions</h4><p>```app/app.js export default Ember.Application.extend({ // Basic logging, e.g. “Transitioned into ‘post’” LOG_TRANSITIONS: true,</p><p>// Extremely detailed logging, highlighting every internal // step made while transitioning into a route, including // <code>beforeModel</code>, <code>model</code>, and <code>afterModel</code> hooks, and // information about redirects and aborted transitions LOG_TRANSITIONS_INTERNAL: true });</p><pre><code class="prettyprint prettyprinted" style=""><span class="com">## Views / Templates</span><span class="pln">
+
+</span><span class="com">#### Log view lookups</span><span class="pln">
+
+</span><span class="str">```config/environment.js
+ENV.APP.LOG_VIEW_LOOKUPS = true;</span></code></pre><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="typ">Ember</span><span class="pun">.</span><span class="pln">keys</span><span class="pun">(</span><span class="typ">Ember</span><span class="pun">.</span><span class="pln">TEMPLATES</span><span class="pun">)</span></code></pre><h2 id="-controllers">Controllers</h2><h4>Log generated controller</h4><p>```config/environment.js ENV.APP.LOG_ACTIVE_GENERATION = true;</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">## Observers / Binding
+
+#### See all observers for an object, key
+
+```javascript
+Ember.observersFor(comments, keyName);</span></code></pre><h4>Log object bindings</h4><p>```config/environments.js ENV.APP.LOG_BINDINGS = true</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">## Miscellaneous
+
+#### Turn on resolver resolution logging
+
+This option logs all the lookups that are done to the console. Custom objects
+you've created yourself have a tick, and Ember generated ones don't.
+
+It's useful for understanding which objects Ember is finding when it does a lookup
+and which it is generating automatically for you.
+
+```app/app.js
+export default Ember.Application.extend({
+  LOG_RESOLVER: true
+});</span></code></pre><h4>Dealing with deprecations</h4><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="typ">Ember</span><span class="pun">.</span><span class="pln">ENV</span><span class="pun">.</span><span class="pln">RAISE_ON_DEPRECATION </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="typ">Ember</span><span class="pun">.</span><span class="pln">ENV</span><span class="pun">.</span><span class="pln">LOG_STACKTRACE_ON_DEPRECATION </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span></code></pre><h4>Implement an Ember.onerror hook to log all errors in production</h4><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="typ">Ember</span><span class="pun">.</span><span class="pln">onerror </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">Ember</span><span class="pun">.</span><span class="pln">$</span><span class="pun">.</span><span class="pln">ajax</span><span class="pun">(</span><span class="string"><span class="str">'/error-notification'</span></span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    type</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">'POST'</span></span><span class="pun">,</span><span class="pln">
+    data</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      stack</span><span class="pun">:</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">stack</span><span class="pun">,</span><span class="pln">
+      otherInformation</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">'exception message'</span></span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">}</span></code></pre><h4>Import the console</h4><p>If you are using imports with Ember, be sure to import the console:</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="typ">Ember</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  imports</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="typ">Handlebars</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Handlebars</span><span class="pun">,</span><span class="pln">
+    jQuery</span><span class="pun">:</span><span class="pln"> $</span><span class="pun">,</span><span class="pln">
+    console</span><span class="pun">:</span><span class="pln"> window</span><span class="pun">.</span><span class="pln">console
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">};</span></code></pre><h4>Errors within an <code>RSVP.Promise</code></h4><p>There are times when dealing with promises that it seems like any errors are being ‘swallowed’, and not properly raised. This makes it extremely difficult to track down where a given issue is coming from. Thankfully, <code>RSVP</code> has a solution for this problem built in.</p><p>You can provide an <code>onerror</code> function that will be called with the error details if any errors occur within your promise. This function can be anything, but a common practice is to call <code>console.assert</code> to dump the error to the console.</p><p>```app/app.js Ember.RSVP.on(‘error’, function(error) { Ember.Logger.assert(false, error); });</p><pre><code class="prettyprint prettyprinted" style=""><span class="tag">&lt;br</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">#### Errors within `Ember.run.later` ([Backburner.js](https://github.com/ebryn/backburner.js))
+
+Backburner has support for stitching the stacktraces together so that you can
+track down where an erroring `Ember.run.later` is being initiated from. Unfortunately,
+this is quite slow and is not appropriate for production or even normal development.
+
+To enable this mode you can set:
+
+```javascript
+Ember.run.backburner.DEBUG = true;</span></code></pre></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/BR/configuring-ember/debugging.pt-BR.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/BR/configuring-ember/debugging.pt-BR.md">
+    <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+</div><!-- end ngIf: !index -->
+<!-- ngIf: index -->
 </div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>

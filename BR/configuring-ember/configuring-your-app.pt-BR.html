@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width">
-  <base href="">
+  <base href="../../">
   <title>Documentation</title>
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -17,8 +17,8 @@
   <link rel="stylesheet" type="text/css" href="./styles/theme.css">
   
 <script type="text/javascript" async="" src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
-<body role="flatdoc">
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: 'html/navbar.html' --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="'html/navbar.html'"><div class="container-fluid ng-scope">
+<body role="flatdoc" class="no-literate">
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -106,18 +106,24 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div class="container-fluid push ng-scope">
-  <div class="row">
-    <div class="col-xs-12 landing">
-      <h1>Ember<b>js</b> documentation</h1>
-      Powered by appbase.io
-    </div>
-
-    <div class="col-xs-12 list">
-      <!-- ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/applications/index.html ng-bind="folder.label">applications</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/components/index.html ng-bind="folder.label">components</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/configuring-ember/index.html ng-bind="folder.label">configuring-ember</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/contributing/index.html ng-bind="folder.label">contributing</a><!-- end ngRepeat: folder in map[currentVersion] -->
-		</div>
+<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+  <div class="menubar fixed">
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"></li></ul></div>
   </div>
-</div>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/3b8cfadcd65ef09ff814deecd58b21b6dc0ca6ef">Mar 22, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Ember CLI ships with support for managing your application’s environment. Ember CLI will setup a default environment config file at <code>config/environment</code>. Here, you can define an <code>ENV</code> object for each environment, which are currently limited to three: development, test, and production.</p><p>The ENV object contains three important keys:</p><ul>
+<li><code>EmberENV</code> can be used to define Ember feature flags (see the <a href="../feature-flags/">Feature Flags guide</a>).</li>
+<li><code>APP</code> can be used to pass flags/options to your application instance.</li>
+<li><code>environment</code> contains the name of the current environment (<code>development</code>,<code>production</code> or <code>test</code>).</li>
+</ul><p>You can access these environment variables in your application code by importing from <code>your-application-name/config/environment</code>.</p><p>For example:</p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="kwd">import</span><span class="pln"> ENV from </span><span class="string"><span class="str">'your-application-name/config/environment'</span></span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">ENV</span><span class="pun">.</span><span class="pln">environment </span><span class="pun">===</span><span class="pln"> </span><span class="string"><span class="str">'development'</span></span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="comment"><span class="com">// ...</span></span><span class="pln">
+</span><span class="pun">}</span></code></pre></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/BR/configuring-ember/configuring-your-app.pt-BR.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/BR/configuring-ember/configuring-your-app.pt-BR.md">
+    <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+</div><!-- end ngIf: !index -->
+<!-- ngIf: index -->
 </div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>

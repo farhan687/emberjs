@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width">
-  <base href="">
+  <base href="../../">
   <title>Documentation</title>
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -18,7 +18,7 @@
   
 <script type="text/javascript" async="" src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script></head>
 <body role="flatdoc">
-  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: 'html/navbar.html' --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="'html/navbar.html'"><div class="container-fluid ng-scope">
+  <!-- ngView:  --><div ng-view="" class="ng-scope"><!-- ngInclude: navbarHtml --><nav class="navbar navbar-default navbar-fixed-top ng-scope" ng-include="navbarHtml"><div class="container-fluid ng-scope">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -106,18 +106,23 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div class="container-fluid push ng-scope">
-  <div class="row">
-    <div class="col-xs-12 landing">
-      <h1>Ember<b>js</b> documentation</h1>
-      Powered by appbase.io
-    </div>
-
-    <div class="col-xs-12 list">
-      <!-- ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/applications/index.html ng-bind="folder.label">applications</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/components/index.html ng-bind="folder.label">components</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/configuring-ember/index.html ng-bind="folder.label">configuring-ember</a><!-- end ngRepeat: folder in map[currentVersion] --><a class="col-xs-12 col-sm-6 col-md-4 col-lg-3 ng-binding ng-scope" ng-repeat="folder in map[currentVersion]" href=./BR/contributing/index.html ng-bind="folder.label">contributing</a><!-- end ngRepeat: folder in map[currentVersion] -->
+<!-- ngIf: !index -->
+<!-- ngIf: index --><div class="index-container ng-scope" data-ng-if="index">
+	<div class="container">
+		<div class="row">
+			<h1 class="col-xs-12 ng-binding">
+				contributing
+			</h1>
 		</div>
-  </div>
-</div>
+		<ul class="row">
+			<!-- ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./BR/contributing/adding-new-features.pt-BR.html class="col-xs-12 ng-binding">adding-new-features.pt-BR</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+				<a href=./BR/contributing/repositories.pt-BR.html class="col-xs-12 ng-binding">repositories.pt-BR</a>
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList -->
+		</ul>
+	</div>
+</div><!-- end ngIf: index -->
 </div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
