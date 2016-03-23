@@ -153,10 +153,22 @@ export default Ember.Component.extend({
 </div><!-- end ngIf: !index -->
 <!-- ngIf: index -->
 </div>
-
- <script type="text/javascript" src="./docbase-config.js"></script>
-  <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>
-
+   <script type="text/javascript" src="./docbase-config.js"></script>
+  <script type="text/javascript" src="./bower_components/docbase/polyfills/polyfill.js"></script>
+  <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./bower_components/flatdoc/legacy.js"></script>
+  <script type="text/javascript" src="./bower_components/flatdoc/flatdoc.js"></script>
+  <script type="text/javascript" src="./bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="./bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="./bower_components/js-schema/js-schema.min.js"></script>
+  <script type="text/javascript" src="./bower_components/google-code-prettify/bin/prettify.min.js"></script>
+  <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./bower_components/docbase/scripts/docbase.js"></script>
+  <script type="text/javascript" src="./bower_components/docbase/scripts/docbase-html-mode.js"></script>
+  <script type="text/javascript" src="./bower_components/docbase/scripts/flatdoc-theme.js"></script>
+  <script type="text/javascript" src="./bower_components/docbase/scripts/searchAppbase.js"></script>
+  <!-- <script type="text/javascript" src="./bower_components/docbase/dist/jsmain.unique.js"></script> -->
 
 
 </body><script>$(function(){  $('.search-form').searchAppbase('/search-index.json', true); })</script></html>
