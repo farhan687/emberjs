@@ -6,8 +6,8 @@ module.exports = function(grunt) {
 					generatePath: "docs_html/",
 					generateSearchIndex : true,
 					generateHtml : true,
-					operation: "parallel",
 					baseUrl: "./",
+					operation: 'parallel',
 					urlToAccess: "http://localhost:9001/",
 					assets: ['bower_components', 'styles', 'images', 'docbase-config.js'],
 					checkLoadedSelector : '#navbar-collapse',
@@ -20,8 +20,8 @@ module.exports = function(grunt) {
 					generatePath: "spa/",
 					generateSearchIndex : true,
 					generateHtml : false,
-					operation: "parallel",
 					baseUrl: "./",
+					operation: 'parallel',
 					urlToAccess: "http://localhost:9001/",
 					assets: ['docs', 'html', 'index.html', 'bower_components', 'styles', 'images', 'docbase-config.js', 'search-index.json' ],
 					checkLoadedSelector : '#navbar-collapse'
@@ -42,10 +42,9 @@ module.exports = function(grunt) {
 				options: {
 					base: 'docs_html',
 					user: {
-						name: 'Travis',
-						email: 'farhan687@gmail.com'
+						name: 'Docbase bot',
+						email: 'awesome@docba.se'
 					},
-					repo: 'https://' + new Buffer(process.env.DOCBASE_TOKEN, 'base64').toString() + '@github.com/farhan687/emberjs.git',
 					message: 'publish gh-pages (auto)',
 					silent: false,
 				},
