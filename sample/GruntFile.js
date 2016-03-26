@@ -45,7 +45,6 @@ module.exports = function(grunt) {
 						name: 'Docbase bot',
 						email: 'awesome@docba.se'
 					},
-					repo: 'https://' + new Buffer(process.env.DOCBASE_TOKEN, 'base64').toString() + '@github.com/undefined/emberjs.git',
 					message: 'publish gh-pages (auto)',
 					silent: false,
 				},
@@ -66,10 +65,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-gh-pages');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 
-	// Default task.
-	
+	// Default task.	
 	var target = grunt.option('target') || 'def';
-	
 	grunt.registerTask('default', ['connect', 'sass', 'docbase:'+target]);
 	grunt.registerTask('publish', ['connect', 'sass', 'docbase:'+target, 'gh-pages']);
 	grunt.registerTask('spa', ['connect', 'sass', 'docbase:spa']);
