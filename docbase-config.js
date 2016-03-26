@@ -22,82 +22,60 @@ var docbaseConfig = {
   "flatdocHtml": "./bower_components/docbase/html/flatdoc.html",
   "html5mode": false,
   "versions": {
-    "BR": [
-      {
-        "label": "addons-and-dependencies",
-        "name": "addons-and-dependencies",
-        "files": [
-          {
-            "name": "managing-dependencies.pt-BR",
-            "label": "managing-dependencies.pt-BR"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "applications",
-        "name": "applications",
-        "files": [
-          {
-            "name": "applications-and-instances.pt-BR",
-            "label": "applications-and-instances.pt-BR"
-          },
-          {
-            "name": "dependency-injection.pt-BR",
-            "label": "dependency-injection.pt-BR"
-          },
-          {
-            "name": "initializers.pt-BR",
-            "label": "initializers.pt-BR"
-          },
-          {
-            "name": "run-loop.pt-BR",
-            "label": "run-loop.pt-BR"
-          },
-          {
-            "name": "services.pt-BR",
-            "label": "services.pt-BR"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
+    "v1.10.0": [
       {
         "label": "components",
         "name": "components",
         "files": [
           {
-            "name": "customizing-a-components-element.pt-BR",
-            "label": "customizing-a-components-element.pt-BR"
+            "name": "customizing-a-components-element",
+            "label": "customizing-a-components-element"
           },
           {
-            "name": "defining-a-component.pt-BR",
-            "label": "defining-a-component.pt-BR"
+            "name": "defining-a-component",
+            "label": "defining-a-component"
           },
           {
-            "name": "handling-events.pt-BR",
-            "label": "handling-events.pt-BR"
+            "name": "handling-user-interaction-with-actions",
+            "label": "handling-user-interaction-with-actions"
           },
           {
-            "name": "passing-properties-to-a-component.pt-BR",
-            "label": "passing-properties-to-a-component.pt-BR"
+            "name": "passing-properties-to-a-component",
+            "label": "passing-properties-to-a-component"
           },
           {
-            "name": "the-component-lifecycle.pt-BR",
-            "label": "the-component-lifecycle.pt-BR"
+            "name": "sending-actions-from-components-to-your-application",
+            "label": "sending-actions-from-components-to-your-application"
           },
           {
-            "name": "triggering-changes-with-actions.pt-BR",
-            "label": "triggering-changes-with-actions.pt-BR"
+            "name": "wrapping-content-in-a-component",
+            "label": "wrapping-content-in-a-component"
           },
           {
-            "name": "wrapping-content-in-a-component.pt-BR",
-            "label": "wrapping-content-in-a-component.pt-BR"
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "concepts",
+        "name": "concepts",
+        "files": [
+          {
+            "name": "core-concepts",
+            "label": "core-concepts"
+          },
+          {
+            "name": "naming-conventions",
+            "label": "naming-conventions"
+          },
+          {
+            "name": "understanding-web-apps",
+            "label": "understanding-web-apps"
+          },
+          {
+            "name": "what-is-ember-js",
+            "label": "what-is-ember-js"
           },
           {
             "label": "index",
@@ -110,36 +88,16 @@ var docbaseConfig = {
         "name": "configuring-ember",
         "files": [
           {
-            "name": "configuring-ember-cli.pt-BR",
-            "label": "configuring-ember-cli.pt-BR"
+            "name": "disabling-prototype-extensions",
+            "label": "disabling-prototype-extensions"
           },
           {
-            "name": "configuring-your-app.pt-BR",
-            "label": "configuring-your-app.pt-BR"
+            "name": "embedding-applications",
+            "label": "embedding-applications"
           },
           {
-            "name": "debugging.pt-BR",
-            "label": "debugging.pt-BR"
-          },
-          {
-            "name": "disabling-prototype-extensions.pt-BR",
-            "label": "disabling-prototype-extensions.pt-BR"
-          },
-          {
-            "name": "embedding-applications.pt-BR",
-            "label": "embedding-applications.pt-BR"
-          },
-          {
-            "name": "feature-flags.pt-BR",
-            "label": "feature-flags.pt-BR"
-          },
-          {
-            "name": "handling-deprecations.pt-BR",
-            "label": "handling-deprecations.pt-BR"
-          },
-          {
-            "name": "specifying-url-type.pt-BR",
-            "label": "specifying-url-type.pt-BR"
+            "name": "feature-flags",
+            "label": "feature-flags"
           },
           {
             "label": "index",
@@ -152,12 +110,32 @@ var docbaseConfig = {
         "name": "contributing",
         "files": [
           {
-            "name": "adding-new-features.pt-BR",
-            "label": "adding-new-features.pt-BR"
+            "name": "adding-new-features",
+            "label": "adding-new-features"
           },
           {
-            "name": "repositories.pt-BR",
-            "label": "repositories.pt-BR"
+            "name": "deciding_if_a_recipe_is_a_good_fit",
+            "label": "deciding_if_a_recipe_is_a_good_fit"
+          },
+          {
+            "name": "participating_if_you_dont_know_ember",
+            "label": "participating_if_you_dont_know_ember"
+          },
+          {
+            "name": "participating_if_you_know_ember",
+            "label": "participating_if_you_know_ember"
+          },
+          {
+            "name": "repositories",
+            "label": "repositories"
+          },
+          {
+            "name": "suggesting_a_recipe",
+            "label": "suggesting_a_recipe"
+          },
+          {
+            "name": "understanding_the_cookbook_format",
+            "label": "understanding_the_cookbook_format"
           },
           {
             "label": "index",
@@ -166,16 +144,134 @@ var docbaseConfig = {
         ]
       },
       {
-        "label": "controllers",
-        "name": "controllers",
+        "label": "event_handling_and_data_binding",
+        "name": "event_handling_and_data_binding",
         "files": [
           {
-            "name": "dependencies-between-controllers.pt-BR",
-            "label": "dependencies-between-controllers.pt-BR"
+            "name": "binding_properties_of_an_object_to_its_own_properties",
+            "label": "binding_properties_of_an_object_to_its_own_properties"
           },
           {
-            "name": "index.pt-BR",
-            "label": "index.pt-BR"
+            "name": "responding_to_user_events",
+            "label": "responding_to_user_events"
+          },
+          {
+            "name": "setting_the_attributes_of_a_views_element",
+            "label": "setting_the_attributes_of_a_views_element"
+          },
+          {
+            "name": "toggling_a_boolean_property",
+            "label": "toggling_a_boolean_property"
+          },
+          {
+            "name": "using_computed_properties",
+            "label": "using_computed_properties"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "helpers_and_components",
+        "name": "helpers_and_components",
+        "files": [
+          {
+            "name": "adding_google_analytics_tracking",
+            "label": "adding_google_analytics_tracking"
+          },
+          {
+            "name": "creating_a_handlebars_helper_to_truncate_text",
+            "label": "creating_a_handlebars_helper_to_truncate_text"
+          },
+          {
+            "name": "creating_reusable_social_share_buttons",
+            "label": "creating_reusable_social_share_buttons"
+          },
+          {
+            "name": "spin_button_for_asynchronous_actions",
+            "label": "spin_button_for_asynchronous_actions"
+          },
+          {
+            "name": "writing_a_custom_handlebars_helper",
+            "label": "writing_a_custom_handlebars_helper"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "user_interface_and_interaction",
+        "name": "user_interface_and_interaction",
+        "files": [
+          {
+            "name": "adding_css_classes_to_your_components",
+            "label": "adding_css_classes_to_your_components"
+          },
+          {
+            "name": "adding_css_classes_to_your_components_based_on_properties",
+            "label": "adding_css_classes_to_your_components_based_on_properties"
+          },
+          {
+            "name": "basic_form_validations",
+            "label": "basic_form_validations"
+          },
+          {
+            "name": "converting_strings_to_currency_with_accounting_js",
+            "label": "converting_strings_to_currency_with_accounting_js"
+          },
+          {
+            "name": "displaying_formatted_dates_with_moment_js",
+            "label": "displaying_formatted_dates_with_moment_js"
+          },
+          {
+            "name": "focusing_a_textfield_after_its_been_inserted",
+            "label": "focusing_a_textfield_after_its_been_inserted"
+          },
+          {
+            "name": "resetting_scroll_on_route_changes",
+            "label": "resetting_scroll_on_route_changes"
+          },
+          {
+            "name": "specifying_data_driven_areas_of_templates_that_do_not_need_to_update",
+            "label": "specifying_data_driven_areas_of_templates_that_do_not_need_to_update"
+          },
+          {
+            "name": "using_modal_dialogs",
+            "label": "using_modal_dialogs"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "working_with_objects",
+        "name": "working_with_objects",
+        "files": [
+          {
+            "name": "continuous_redrawing_of_views",
+            "label": "continuous_redrawing_of_views"
+          },
+          {
+            "name": "displaying_content_arrays_in_reverse_order",
+            "label": "displaying_content_arrays_in_reverse_order"
+          },
+          {
+            "name": "incrementing_or_decrementing_a_property",
+            "label": "incrementing_or_decrementing_a_property"
+          },
+          {
+            "name": "naming_your_child_views",
+            "label": "naming_your_child_views"
+          },
+          {
+            "name": "setting_multiple_properties_at_once",
+            "label": "setting_multiple_properties_at_once"
           },
           {
             "label": "index",
@@ -184,14 +280,14 @@ var docbaseConfig = {
         ]
       }
     ],
-    "DE": [
+    "v2.0.0": [
       {
         "label": "addons-and-dependencies",
         "name": "addons-and-dependencies",
         "files": [
           {
-            "name": "managing-dependencies.de-DE",
-            "label": "managing-dependencies.de-DE"
+            "name": "managing-dependencies",
+            "label": "managing-dependencies"
           },
           {
             "label": "index",
@@ -204,24 +300,24 @@ var docbaseConfig = {
         "name": "applications",
         "files": [
           {
-            "name": "applications-and-instances.de-DE",
-            "label": "applications-and-instances.de-DE"
+            "name": "applications-and-instances",
+            "label": "applications-and-instances"
           },
           {
-            "name": "dependency-injection.de-DE",
-            "label": "dependency-injection.de-DE"
+            "name": "dependency-injection",
+            "label": "dependency-injection"
           },
           {
-            "name": "initializers.de-DE",
-            "label": "initializers.de-DE"
+            "name": "initializers",
+            "label": "initializers"
           },
           {
-            "name": "run-loop.de-DE",
-            "label": "run-loop.de-DE"
+            "name": "run-loop",
+            "label": "run-loop"
           },
           {
-            "name": "services.de-DE",
-            "label": "services.de-DE"
+            "name": "services",
+            "label": "services"
           },
           {
             "label": "index",
@@ -234,32 +330,28 @@ var docbaseConfig = {
         "name": "components",
         "files": [
           {
-            "name": "customizing-a-components-element.de-DE",
-            "label": "customizing-a-components-element.de-DE"
+            "name": "customizing-a-components-element",
+            "label": "customizing-a-components-element"
           },
           {
-            "name": "defining-a-component.de-DE",
-            "label": "defining-a-component.de-DE"
+            "name": "defining-a-component",
+            "label": "defining-a-component"
           },
           {
-            "name": "handling-events.de-DE",
-            "label": "handling-events.de-DE"
+            "name": "handling-events",
+            "label": "handling-events"
           },
           {
-            "name": "passing-properties-to-a-component.de-DE",
-            "label": "passing-properties-to-a-component.de-DE"
+            "name": "passing-properties-to-a-component",
+            "label": "passing-properties-to-a-component"
           },
           {
-            "name": "the-component-lifecycle.de-DE",
-            "label": "the-component-lifecycle.de-DE"
+            "name": "triggering-changes-with-actions",
+            "label": "triggering-changes-with-actions"
           },
           {
-            "name": "triggering-changes-with-actions.de-DE",
-            "label": "triggering-changes-with-actions.de-DE"
-          },
-          {
-            "name": "wrapping-content-in-a-component.de-DE",
-            "label": "wrapping-content-in-a-component.de-DE"
+            "name": "wrapping-content-in-a-component",
+            "label": "wrapping-content-in-a-component"
           },
           {
             "label": "index",
@@ -272,36 +364,32 @@ var docbaseConfig = {
         "name": "configuring-ember",
         "files": [
           {
-            "name": "configuring-ember-cli.de-DE",
-            "label": "configuring-ember-cli.de-DE"
+            "name": "configuring-ember-cli",
+            "label": "configuring-ember-cli"
           },
           {
-            "name": "configuring-your-app.de-DE",
-            "label": "configuring-your-app.de-DE"
+            "name": "configuring-your-app",
+            "label": "configuring-your-app"
           },
           {
-            "name": "debugging.de-DE",
-            "label": "debugging.de-DE"
+            "name": "debugging",
+            "label": "debugging"
           },
           {
-            "name": "disabling-prototype-extensions.de-DE",
-            "label": "disabling-prototype-extensions.de-DE"
+            "name": "disabling-prototype-extensions",
+            "label": "disabling-prototype-extensions"
           },
           {
-            "name": "embedding-applications.de-DE",
-            "label": "embedding-applications.de-DE"
+            "name": "embedding-applications",
+            "label": "embedding-applications"
           },
           {
-            "name": "feature-flags.de-DE",
-            "label": "feature-flags.de-DE"
+            "name": "feature-flags",
+            "label": "feature-flags"
           },
           {
-            "name": "handling-deprecations.de-DE",
-            "label": "handling-deprecations.de-DE"
-          },
-          {
-            "name": "specifying-url-type.de-DE",
-            "label": "specifying-url-type.de-DE"
+            "name": "specifying-url-type",
+            "label": "specifying-url-type"
           },
           {
             "label": "index",
@@ -314,12 +402,12 @@ var docbaseConfig = {
         "name": "contributing",
         "files": [
           {
-            "name": "adding-new-features.de-DE",
-            "label": "adding-new-features.de-DE"
+            "name": "adding-new-features",
+            "label": "adding-new-features"
           },
           {
-            "name": "repositories.de-DE",
-            "label": "repositories.de-DE"
+            "name": "repositories",
+            "label": "repositories"
           },
           {
             "label": "index",
@@ -332,12 +420,66 @@ var docbaseConfig = {
         "name": "controllers",
         "files": [
           {
-            "name": "dependencies-between-controllers.de-DE",
-            "label": "dependencies-between-controllers.de-DE"
+            "name": "dependencies-between-controllers",
+            "label": "dependencies-between-controllers"
           },
           {
-            "name": "index.de-DE",
-            "label": "index.de-DE"
+            "name": "index",
+            "label": "index"
+          },
+          {
+            "label": "index",
+            "name": "index"
+          }
+        ]
+      },
+      {
+        "label": "ember-inspector",
+        "name": "ember-inspector",
+        "files": [
+          {
+            "name": "container",
+            "label": "container"
+          },
+          {
+            "name": "data",
+            "label": "data"
+          },
+          {
+            "name": "deprecations",
+            "label": "deprecations"
+          },
+          {
+            "name": "info",
+            "label": "info"
+          },
+          {
+            "name": "installation",
+            "label": "installation"
+          },
+          {
+            "name": "object-inspector",
+            "label": "object-inspector"
+          },
+          {
+            "name": "promises",
+            "label": "promises"
+          },
+          {
+            "name": "render-performance",
+            "label": "render-performance"
+          },
+          {
+            "name": "routes",
+            "label": "routes"
+          },
+          {
+            "name": "troubleshooting",
+            "label": "troubleshooting"
+          },
+          {
+            "name": "view-tree",
+            "label": "view-tree"
           },
           {
             "label": "index",
@@ -346,7 +488,7 @@ var docbaseConfig = {
         ]
       }
     ],
-    "EN": [
+    "v2.2.0": [
       {
         "label": "addons-and-dependencies",
         "name": "addons-and-dependencies",
@@ -500,168 +642,6 @@ var docbaseConfig = {
           {
             "name": "index",
             "label": "index"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      }
-    ],
-    "JP": [
-      {
-        "label": "addons-and-dependencies",
-        "name": "addons-and-dependencies",
-        "files": [
-          {
-            "name": "managing-dependencies.ja-JP",
-            "label": "managing-dependencies.ja-JP"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "applications",
-        "name": "applications",
-        "files": [
-          {
-            "name": "applications-and-instances.ja-JP",
-            "label": "applications-and-instances.ja-JP"
-          },
-          {
-            "name": "dependency-injection.ja-JP",
-            "label": "dependency-injection.ja-JP"
-          },
-          {
-            "name": "initializers.ja-JP",
-            "label": "initializers.ja-JP"
-          },
-          {
-            "name": "run-loop.ja-JP",
-            "label": "run-loop.ja-JP"
-          },
-          {
-            "name": "services.ja-JP",
-            "label": "services.ja-JP"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "components",
-        "name": "components",
-        "files": [
-          {
-            "name": "customizing-a-components-element.ja-JP",
-            "label": "customizing-a-components-element.ja-JP"
-          },
-          {
-            "name": "defining-a-component.ja-JP",
-            "label": "defining-a-component.ja-JP"
-          },
-          {
-            "name": "handling-events.ja-JP",
-            "label": "handling-events.ja-JP"
-          },
-          {
-            "name": "passing-properties-to-a-component.ja-JP",
-            "label": "passing-properties-to-a-component.ja-JP"
-          },
-          {
-            "name": "the-component-lifecycle.ja-JP",
-            "label": "the-component-lifecycle.ja-JP"
-          },
-          {
-            "name": "triggering-changes-with-actions.ja-JP",
-            "label": "triggering-changes-with-actions.ja-JP"
-          },
-          {
-            "name": "wrapping-content-in-a-component.ja-JP",
-            "label": "wrapping-content-in-a-component.ja-JP"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "configuring-ember",
-        "name": "configuring-ember",
-        "files": [
-          {
-            "name": "configuring-ember-cli.ja-JP",
-            "label": "configuring-ember-cli.ja-JP"
-          },
-          {
-            "name": "configuring-your-app.ja-JP",
-            "label": "configuring-your-app.ja-JP"
-          },
-          {
-            "name": "debugging.ja-JP",
-            "label": "debugging.ja-JP"
-          },
-          {
-            "name": "disabling-prototype-extensions.ja-JP",
-            "label": "disabling-prototype-extensions.ja-JP"
-          },
-          {
-            "name": "embedding-applications.ja-JP",
-            "label": "embedding-applications.ja-JP"
-          },
-          {
-            "name": "feature-flags.ja-JP",
-            "label": "feature-flags.ja-JP"
-          },
-          {
-            "name": "handling-deprecations.ja-JP",
-            "label": "handling-deprecations.ja-JP"
-          },
-          {
-            "name": "specifying-url-type.ja-JP",
-            "label": "specifying-url-type.ja-JP"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "contributing",
-        "name": "contributing",
-        "files": [
-          {
-            "name": "adding-new-features.ja-JP",
-            "label": "adding-new-features.ja-JP"
-          },
-          {
-            "name": "repositories.ja-JP",
-            "label": "repositories.ja-JP"
-          },
-          {
-            "label": "index",
-            "name": "index"
-          }
-        ]
-      },
-      {
-        "label": "controllers",
-        "name": "controllers",
-        "files": [
-          {
-            "name": "dependencies-between-controllers.ja-JP",
-            "label": "dependencies-between-controllers.ja-JP"
-          },
-          {
-            "name": "index.ja-JP",
-            "label": "index.ja-JP"
           },
           {
             "label": "index",
