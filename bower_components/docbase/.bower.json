@@ -1,0 +1,37 @@
+{
+  "name": "docbase",
+  "version": "0.2.28",
+  "homepage": "https://github.com/appbaseio/Docbase",
+  "authors": [
+    "Henrique Sa <henriquepss@gmail.com>",
+    "Mateus Freira <mateus.freira@gmail.com>"
+  ],
+  "description": "A fast and flexible single-page documentation engine",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flatdoc": "~0.9.0",
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.2",
+    "angular": "~1.3.13",
+    "angular-route": "~1.3.13",
+    "google-code-prettify": "~1.0.4",
+    "js-schema": "~0.7.2",
+    "font-awesome": "~4.5.0"
+  },
+  "_release": "0.2.28",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.28",
+    "commit": "521d30bac5024ed6a7c0fe6917243d9522a2808c"
+  },
+  "_source": "git://github.com/appbaseio/DocBase.git",
+  "_target": "*",
+  "_originalSource": "docbase"
+}

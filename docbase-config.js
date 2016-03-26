@@ -12,7 +12,7 @@ var docbaseConfig = {
     "path": ""
   },
   "github": {
-    "user": "",
+    "user": "farhan687",
     "repo": "emberjs",
     "path": "source",
     "branch": "master",
