@@ -208,10 +208,56 @@
 </nav>
 <!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
   <div class="menubar fixed">
-    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-problem-item" class="level-2"><a id="-problem-link" href="./v1.10.0/working_with_objects/naming_your_child_views.html#-problem" class="level-2" pref="#-problem">Problem</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-solution-item" class="level-2"><a id="-solution-link" href="./v1.10.0/working_with_objects/naming_your_child_views.html#-solution" class="level-2" pref="#-solution">Solution</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-discussion-item" class="level-2"><a id="-discussion-link" href="./v1.10.0/working_with_objects/naming_your_child_views.html#-discussion" class="level-2" pref="#-discussion">Discussion</a></li></ul></li></ul></li></ul></div>
+    <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-defining-a-component-subclass-item" class="level-3"><a id="-defining-a-component-subclass-link" href="./v1.10.0/components/defining-a-component.html#-defining-a-component-subclass" class="level-3" pref="#-defining-a-component-subclass">Defining a Component Subclass</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h2 id="-problem">Problem</h2><p>You want to access a particular child view by name from its parent view.</p><h2 id="-solution">Solution</h2><p>Supply a <code>viewName</code> option to the <code>{{view}}</code> helper inside your template.</p><h2 id="-discussion">Discussion</h2></div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/naming_your_child_views.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/naming_your_child_views.md">
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>To define a component, create a template whose name starts with
+<code>components/</code>. To define a new component, <code>{{blog-post}}</code> for example,
+create a <code>components/blog-post</code> template.</p><p><strong>Note:</strong> Components must have a dash in their name. So <code>blog-post</code> is an acceptable name,
+but <code>post</code> is not. This prevents clashes with current or future HTML element names, and
+ensures Ember picks up the components automatically.</p><p>If you are including your Handlebars templates inside an HTML file via
+<code>&lt;script&gt;</code> tags, it would look like this:</p><pre><code class="lang-handlebars prettyprint prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="string"><span class="atv">"text/x-handlebars"</span></span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="string"><span class="atv">"components/blog-post"</span></span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="pun">&lt;</span><span class="pln">h</span><span class="number"><span class="pln">1</span></span><span class="pun">&gt;</span><span class="typ">Blog</span><span class="pln"> </span><span class="typ">Post</span><span class="pun">&lt;/</span><span class="pln">h</span><span class="number"><span class="pln">1</span></span><span class="pun">&gt;</span><span class="pln">
+  </span><span class="pun">&lt;</span><span class="pln">p</span><span class="pun">&gt;</span><span class="typ">Lorem</span><span class="pln"> ipsum dolor sit amet</span><span class="pun">.&lt;/</span><span class="pln">p</span><span class="pun">&gt;</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></code></pre><p>If you’re using build tools, create a Handlebars file at
+<code>templates/components/blog-post.handlebars</code>.</p><p>Having a template whose name starts with <code>components/</code> creates a
+component of the same name. Given the above template, you can now use the
+<code>{{blog-post}}</code> custom element:</p><pre><code class="lang-handlebars prettyprint prettyprinted" style=""><span class="tag">&lt;h</span><span class="number"><span class="tag">1</span></span><span class="tag">&gt;</span><span class="pln">My Blog</span><span class="tag">&lt;/h</span><span class="number"><span class="tag">1</span></span><span class="tag">&gt;</span><span class="pln">
+{{</span><span class="comment"><span class="pln">#each post in model}}</span></span><span class="pln">
+  {{blog-post}}
+{{/each}}</span></code></pre><p><iframe class="" id="" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); width: 100%; min-height: 300px; " data-url="http://jsbin.com/juvic/embed?js,output" src="https://jsbin.com/embed-holding"></iframe><script src="http://static.jsbin.com/js/embed.js"></script></p><p>Each component, under the hood, is backed by an element. By default
+Ember will use a <code>&lt;div&gt;</code> element to contain your component’s template.
+To learn how to change the element Ember uses for your component, see
+<a href="../customizing-a-components-element">Customizing a Component’s
+Element</a>.</p><h3 id="-defining-a-component-subclass">Defining a Component Subclass</h3><p>Often times, your components will just encapsulate certain snippets of
+Handlebars templates that you find yourself using over and over. In
+those cases, you do not need to write any JavaScript at all. Just define
+the Handlebars template as described above and use the component that is
+created.</p><p>If you need to customize the behavior of the component you’ll
+need to define a subclass of <code>Ember.Component</code>. For example, you would
+need a custom subclass if you wanted to change a component’s element,
+respond to actions from the component’s template, or manually make
+changes to the component’s element using JavaScript.</p><p>Ember knows which subclass powers a component based on its name. For
+example, if you have a component called <code>blog-post</code>, you would create a
+subclass called <code>App.BlogPostComponent</code>. If your component was called
+<code>audio-player-controls</code>, the class name would be
+<code>App.AudioPlayerControlsComponent</code>.</p><p>In other words, Ember will look for a class with the camelized name of
+the component, followed by <code>Component</code>.</p><table>
+  <thead>
+  <tr>
+    <th>Component Name</th>
+    <th>Component Class</th>
+  </tr>
+  </thead>
+  <tbody><tr>
+    <td><code>blog-post</code></td>
+    <td><code>App.BlogPostComponent</code></td>
+  </tr>
+  <tr>
+    <td><code>audio-player-controls</code></td>
+    <td><code>App.AudioPlayerControlsComponent</code></td>
+  </tr>
+</tbody></table></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/components/defining-a-component.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/components/defining-a-component.md">
     <span class="fa fa-pencil"> Edit</span>
   </a><!-- end ngIf: docbaseOptions.method == 'github' -->
 </div><!-- end ngIf: !index -->

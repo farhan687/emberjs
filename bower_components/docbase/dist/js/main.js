@@ -1166,11 +1166,13 @@
 
 (function($) {
 	$.fn.highlight = function(pat) {
+		var successCount = 0;
 		function innerHighlight(node, pat) {
 			var skip = 0;
 			if (node.nodeType == 3) {
 				var pos = node.data.toUpperCase().indexOf(pat);
 				if (pos >= 0) {
+					successCount++;
 					var spannode = document.createElement('span');
 					spannode.className = 'highlight';
 					var middlebit = node.splitText(pos);
@@ -1181,8 +1183,10 @@
 					skip = 1;
 				}
 			} else if (node.nodeType == 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
-				var childLength = node.childNodes.length < 100 ? node.childNodes.length : 100;
-				for (var i = 0; i < childLength; ++i) {
+				for (var i = 0; i < node.childNodes.length; ++i) {
+					if(successCount > 100) {
+						break;
+					}
 					i += innerHighlight(node.childNodes[i], pat);
 				}
 			}
