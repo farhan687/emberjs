@@ -62,7 +62,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-docbase');
+	grunt.loadNpmTasks('grunt-test-docbase');
 	grunt.loadNpmTasks('grunt-gh-pages');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 
