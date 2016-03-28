@@ -179,12 +179,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-inspecting-templates-item" class="level-3"><a id="-inspecting-templates-link" href="./v2.0.0/ember-inspector/view-tree.html#-inspecting-templates" class="level-3" pref="#-inspecting-templates">Inspecting Templates</a></li></ul></li><li id="-components-and-inline-views-item" class="level-3"><a id="-components-and-inline-views-link" href="./v2.0.0/ember-inspector/view-tree.html#-components-and-inline-views" class="level-3" pref="#-components-and-inline-views">Components and Inline Views</a></li><li id="-highlighting-templates-item" class="level-3"><a id="-highlighting-templates-link" href="./v2.0.0/ember-inspector/view-tree.html#-highlighting-templates" class="level-3" pref="#-highlighting-templates">Highlighting Templates</a></li><li id="-duration-item" class="level-3"><a id="-duration-link" href="./v2.0.0/ember-inspector/view-tree.html#-duration" class="level-3" pref="#-duration">Duration</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>You can use the View Tree to inspect your application’s current state.
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>You can use the View Tree to inspect your application’s current state.
 The View Tree shows you the currently rendered templates, models, controllers, and components, in a tree format. Click on the <code>View Tree</code> menu on the left to see these.</p><p><img src="../../images/guides/ember-inspector/view-tree-screenshot.png" width="680"></p><p>Use the tips described in <a href="../object-inspector">Object Inspector</a> to inspect models and controllers. See below for templates and components.</p><h3 id="-inspecting-templates">Inspecting Templates</h3><p>To see how a template was rendered by Ember, click on the template in the View Tree. If 
 you’re using Chrome or Firefox, you’ll be sent to the Elements panel with that DOM element selected.</p><p><img src="../../images/guides/ember-inspector/view-tree-template.png" width="350"></p><p><img src="../../images/guides/ember-inspector/view-tree-elements-panel.png" width="450"></p><h3 id="-components-and-inline-views">Components and Inline Views</h3><p>The View Tree ignores components and inline views by default. To load these into the View Tree check the <code>Components</code> and <code>All Views</code> checkboxes.</p><p><img src="../../images/guides/ember-inspector/view-tree-components.png" width="600"></p><p>You can then inspect components using the Object Inspector.</p><h3 id="-highlighting-templates">Highlighting Templates</h3><h4>Hovering over the View Tree</h4><p>When you hover over the items in the View Tree, the related templates will be
 highlighted in your app. For every highlighted template, you can see the
@@ -192,8 +191,9 @@ template name, and its associated objects.</p><p><img src="../../images/guides/e
 As your our mouse passes over it, the related template or component will be
 highlighted.</p><p><img src="../../images/guides/ember-inspector/view-tree-magnifying-glass.png" width="500"></p><p>If you click on a highlighted template or component, the Inspector will select it. You can then
 click on the backing objects to send them to the object inspector.</p><p><img src="../../images/guides/ember-inspector/view-tree-inspect.png"></p><p>Click on the <code>X</code> button to unselect a template.</p><h3 id="-duration">Duration</h3><p>The Duration column displays the render time for a given template, including the template’s children.</p><p><img src="../../images/guides/ember-inspector/view-tree-duration.png" width="500"></p><p>By measuring the render time, the Inspector adds a slight delay to the rendering process. As such, the duration is not an exact representation of expected rendering time for a production application. Thus, the rendering duration is more useful to compare times than as an absolute measure of performance.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/view-tree.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/view-tree.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -205,13 +205,8 @@ click on the backing objects to send them to the object inspector.</p><p><img sr
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/view-tree.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/view-tree.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

@@ -206,12 +206,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-problem-item" class="level-2"><a id="-problem-link" href="./v1.10.0/working_with_objects/displaying_content_arrays_in_reverse_order.html#-problem" class="level-2" pref="#-problem">Problem</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-solution-item" class="level-2"><a id="-solution-link" href="./v1.10.0/working_with_objects/displaying_content_arrays_in_reverse_order.html#-solution" class="level-2" pref="#-solution">Solution</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-discussion-item" class="level-2"><a id="-discussion-link" href="./v1.10.0/working_with_objects/displaying_content_arrays_in_reverse_order.html#-discussion" class="level-2" pref="#-discussion">Discussion</a><ul class="level-3" id="-discussion-list"><li id="-discussion-example-item" class="level-3"><a id="-discussion-example-link" href="./v1.10.0/working_with_objects/displaying_content_arrays_in_reverse_order.html#-discussion-example" class="level-3" pref="#-discussion-example">Example</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h2 id="-problem">Problem</h2><p>You want to display an Ember content array from an ArrayController in descending order instead of ascending order (the default).</p><h2 id="-solution">Solution</h2><ol>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h2 id="-problem">Problem</h2><p>You want to display an Ember content array from an ArrayController in descending order instead of ascending order (the default).</p><h2 id="-solution">Solution</h2><ol>
 <li>Convert the built-in content array to a normal JavaScript array, then reverse it.
 You use Ember’s @each property to mirror the reverse change to the content array.</li>
 <li>User the built-in <code>sortProperties</code> and <code>sortAscending</code> properties to reverse the order.</li>
@@ -223,8 +222,9 @@ Just specify them on your controller, like so:</p><pre><code class="lang-javascr
   sortProperties</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="string"><span class="str">'id'</span></span><span class="pun">],</span><span class="pln">
   sortAscending</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
 </span><span class="pun">});</span></code></pre><p>And in your template you will be able to consume a reversed array, like this: <code>{{#each arrangedContent}}{{/each}}</code>.</p><h3 id="-discussion-example">Example</h3><p><iframe class="" id="" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); width: 100%; min-height: 300px; " data-url="http://jsbin.com/opid/3/embed?html,js,output" src="https://jsbin.com/embed-holding"></iframe><script src="http://static.jsbin.com/js/embed.js"></script></p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/displaying_content_arrays_in_reverse_order.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/displaying_content_arrays_in_reverse_order.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -236,13 +236,8 @@ Just specify them on your controller, like so:</p><pre><code class="lang-javascr
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/displaying_content_arrays_in_reverse_order.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/displaying_content_arrays_in_reverse_order.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

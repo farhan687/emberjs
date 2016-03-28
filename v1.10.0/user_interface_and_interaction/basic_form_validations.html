@@ -206,12 +206,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-problem-item" class="level-2"><a id="-problem-link" href="./v1.10.0/user_interface_and_interaction/basic_form_validations.html#-problem" class="level-2" pref="#-problem">Problem</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-solution-item" class="level-2"><a id="-solution-link" href="./v1.10.0/user_interface_and_interaction/basic_form_validations.html#-solution" class="level-2" pref="#-solution">Solution</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-discussion-item" class="level-2"><a id="-discussion-link" href="./v1.10.0/user_interface_and_interaction/basic_form_validations.html#-discussion" class="level-2" pref="#-discussion">Discussion</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h2 id="-problem">Problem</h2><p>You want to validate your form text fields. The validation should only
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h2 id="-problem">Problem</h2><p>You want to validate your form text fields. The validation should only
 apply when the user focused out of the input (so that a blank form won’t
 be all-red until user focuses each field).</p><h2 id="-solution">Solution</h2><p>Create a new component and define a <code>focusOut</code> hook, which will record
 that the field has been focused, and add a computed property named
@@ -244,8 +243,9 @@ element itself this way), we are creating a new component,
 <code>ValidatedInputComponent</code>.</p><p>It renders a wrapped input field. The wrapper has the <code>has-error</code> class
 if <code>hasError</code> property of the component is true. It’s true only when
 the validation fails and the field has been focused at.</p><h4>Example</h4><p><iframe class="" id="" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); width: 100%; min-height: 300px; " data-url="http://jsbin.com/UpaXeta/3/embed?live" src="https://jsbin.com/embed-holding"></iframe><script src="http://static.jsbin.com/js/embed.js"></script></p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/user_interface_and_interaction/basic_form_validations.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/user_interface_and_interaction/basic_form_validations.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -257,13 +257,8 @@ the validation fails and the field has been focused at.</p><h4>Example</h4><p><i
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/user_interface_and_interaction/basic_form_validations.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/user_interface_and_interaction/basic_form_validations.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

@@ -154,12 +154,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-addons-item" class="level-2"><a id="-addons-link" href="./v2.2.0/addons-and-dependencies/managing-dependencies.html#-addons" class="level-2" pref="#-addons">Addons</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-bower-item" class="level-2"><a id="-bower-link" href="./v2.2.0/addons-and-dependencies/managing-dependencies.html#-bower" class="level-2" pref="#-bower">Bower</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-other-assets-item" class="level-2"><a id="-other-assets-link" href="./v2.2.0/addons-and-dependencies/managing-dependencies.html#-other-assets" class="level-2" pref="#-other-assets">Other assets</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-compiling-assets-item" class="level-2"><a id="-compiling-assets-link" href="./v2.2.0/addons-and-dependencies/managing-dependencies.html#-compiling-assets" class="level-2" pref="#-compiling-assets">Compiling Assets</a><ul class="level-3" id="-compiling-assets-list"><li id="-compiling-assets-globals-provided-by-javascript-assets-item" class="level-3"><a id="-compiling-assets-globals-provided-by-javascript-assets-link" href="./v2.2.0/addons-and-dependencies/managing-dependencies.html#-compiling-assets-globals-provided-by-javascript-assets" class="level-3" pref="#-compiling-assets-globals-provided-by-javascript-assets">Globals provided by Javascript assets</a></li><li id="-compiling-assets-amd-javascript-modules-item" class="level-3"><a id="-compiling-assets-amd-javascript-modules-link" href="./v2.2.0/addons-and-dependencies/managing-dependencies.html#-compiling-assets-amd-javascript-modules" class="level-3" pref="#-compiling-assets-amd-javascript-modules">AMD Javascript modules</a></li><li id="-compiling-assets-environment-specific-assets-item" class="level-3"><a id="-compiling-assets-environment-specific-assets-link" href="./v2.2.0/addons-and-dependencies/managing-dependencies.html#-compiling-assets-environment-specific-assets" class="level-3" pref="#-compiling-assets-environment-specific-assets">Environment Specific Assets</a></li><li id="-compiling-assets-css-item" class="level-3"><a id="-compiling-assets-css-link" href="./v2.2.0/addons-and-dependencies/managing-dependencies.html#-compiling-assets-css" class="level-3" pref="#-compiling-assets-css">CSS</a></li><li id="-compiling-assets-other-assets-item" class="level-3"><a id="-compiling-assets-other-assets-link" href="./v2.2.0/addons-and-dependencies/managing-dependencies.html#-compiling-assets-other-assets" class="level-3" pref="#-compiling-assets-other-assets">Other Assets</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>As you’re developing your Ember app, you’ll likely run into common scenarios that aren’t addressed by Ember itself,
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>As you’re developing your Ember app, you’ll likely run into common scenarios that aren’t addressed by Ember itself,
 such as authentication or using SASS for your stylesheets.
 Ember CLI provides a common format called <a href="#toc_addons">Ember Addons</a> for distributing reusable libraries
 to solve these problems.
@@ -212,8 +211,9 @@ This will prepend the dependency to the vendor file instead of appending it, whi
   type</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">'vendor'</span></span><span class="pun">,</span><span class="pln">
   prepend</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
 </span><span class="pun">});</span></code></pre></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/addons-and-dependencies/managing-dependencies.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/addons-and-dependencies/managing-dependencies.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
@@ -225,13 +225,8 @@ This will prepend the dependency to the vendor file instead of appending it, whi
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/addons-and-dependencies/managing-dependencies.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/addons-and-dependencies/managing-dependencies.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

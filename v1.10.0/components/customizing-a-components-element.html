@@ -206,12 +206,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-customizing-the-element-item" class="level-3"><a id="-customizing-the-element-link" href="./v1.10.0/components/customizing-a-components-element.html#-customizing-the-element" class="level-3" pref="#-customizing-the-element">Customizing the Element</a></li></ul></li><li id="-customizing-class-names-item" class="level-3"><a id="-customizing-class-names-link" href="./v1.10.0/components/customizing-a-components-element.html#-customizing-class-names" class="level-3" pref="#-customizing-class-names">Customizing Class Names</a></li><li id="-customizing-attributes-item" class="level-3"><a id="-customizing-attributes-link" href="./v1.10.0/components/customizing-a-components-element.html#-customizing-attributes" class="level-3" pref="#-customizing-attributes">Customizing Attributes</a></li><li id="-example-item" class="level-3"><a id="-example-link" href="./v1.10.0/components/customizing-a-components-element.html#-example" class="level-3" pref="#-example">Example</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>By default, each component is backed by a <code>&lt;div&gt;</code> element. If you were
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>By default, each component is backed by a <code>&lt;div&gt;</code> element. If you were
 to look at a rendered component in your developer tools, you would see
 a DOM representation that looked something like:</p><pre><code class="lang-html prettyprint prettyprinted" style=""><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="string"><span class="atv">"ember</span><span class="number"><span class="atv">180</span></span><span class="atv">"</span></span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"ember-view"</span></span><span class="tag">&gt;</span><span class="pln">
   </span><span class="tag">&lt;h</span><span class="number"><span class="tag">1</span></span><span class="tag">&gt;</span><span class="pln">My Component</span><span class="tag">&lt;/h</span><span class="number"><span class="tag">1</span></span><span class="tag">&gt;</span><span class="pln">
@@ -260,8 +259,9 @@ by using <code>attributeBindings</code>:</p><pre><code class="lang-javascript pr
 </span><span class="pun">});</span></code></pre><h3 id="-example">Example</h3><p>Here is an example todo application that shows completed todos with a
 red background:</p><p><iframe class="" id="" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); width: 100%; min-height: 300px; " data-url="http://jsbin.com/duzala/1/embed?live" src="https://jsbin.com/embed-holding"></iframe><script src="http://static.jsbin.com/js/embed.js"></script></p><p><strong>Note:</strong> The binding functionality in this very simple example could also be implemented without
 the use of <code>Ember.Component</code> but by simply <a href="../../templates/binding-element-attributes">binding element attributes</a> or <a href="../../templates/binding-element-class-names">binding element class names</a>.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/components/customizing-a-components-element.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/components/customizing-a-components-element.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
@@ -273,13 +273,8 @@ the use of <code>Ember.Component</code> but by simply <a href="../../templates/b
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/components/customizing-a-components-element.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/components/customizing-a-components-element.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

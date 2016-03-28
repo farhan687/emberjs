@@ -206,12 +206,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-problem-item" class="level-3"><a id="-problem-link" href="./v1.10.0/helpers_and_components/creating_reusable_social_share_buttons.html#-problem" class="level-3" pref="#-problem">Problem</a></li></ul></li><li id="-solution-item" class="level-3"><a id="-solution-link" href="./v1.10.0/helpers_and_components/creating_reusable_social_share_buttons.html#-solution" class="level-3" pref="#-solution">Solution</a></li><li id="-discussion-item" class="level-3"><a id="-discussion-link" href="./v1.10.0/helpers_and_components/creating_reusable_social_share_buttons.html#-discussion" class="level-3" pref="#-discussion">Discussion</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You want to create a reusable <a href="https://dev.twitter.com/docs/tweet-button">Tweet button</a>
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You want to create a reusable <a href="https://dev.twitter.com/docs/tweet-button">Tweet button</a>
 for your application.</p><h3 id="-solution">Solution</h3><p>Write a custom component that renders the Tweet button with specific attributes
 passed in.</p><pre><code class="lang-handlebars prettyprint prettyprinted" style=""><span class="pun">{{</span><span class="pln">share</span><span class="pun">-</span><span class="pln">twitter data</span><span class="pun">-</span><span class="pln">url</span><span class="pun">=</span><span class="string"><span class="str">"http:</span><span class="comment"><span class="str">//emberjs.com"</span></span><span class="pln"> </span></span><span class="pln">
                 data</span><span class="pun">-</span><span class="pln">text</span><span class="pun">=</span><span class="string"><span class="str">"EmberJS Components are Amazing!"</span></span><span class="pln"> 
@@ -226,8 +225,9 @@ It takes the values of these attributes and, when the <code>&lt;a&gt;</code> tag
 component object. </p><p>The component defines certain attributes of its HTML representation as bound to properties of the object through
 its <code>attributeBindings</code> property. When the values of these properties change, the component’s HTML element’s
 attributes will be updated to match the new values.</p><p>An appropriate tag and css class are applied through the <code>tagName</code> and <code>classNames</code> properties.</p><h4>Example</h4><p><a class="jsbin-embed" href="http://emberjs.jsbin.com/OpocEPu/1/edit?js,output">JS Bin</a></p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/helpers_and_components/creating_reusable_social_share_buttons.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/helpers_and_components/creating_reusable_social_share_buttons.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -239,13 +239,8 @@ attributes will be updated to match the new values.</p><p>An appropriate tag and
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/helpers_and_components/creating_reusable_social_share_buttons.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/helpers_and_components/creating_reusable_social_share_buttons.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

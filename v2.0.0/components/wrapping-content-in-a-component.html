@@ -179,12 +179,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Sometimes, you may want to define a component that wraps content
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Sometimes, you may want to define a component that wraps content
 provided by other templates.</p><p>For example, imagine we are building a <code>blog-post</code> component that we can
 use in our application to display a blog post:</p><pre><code class="lang-app/templates/components/blog-post.hbs prettyprint prettyprinted" style=""><span class="tag">&lt;h</span><span class="number"><span class="tag">1</span></span><span class="tag">&gt;</span><span class="pln">{{title}}</span><span class="tag">&lt;/h</span><span class="number"><span class="tag">1</span></span><span class="tag">&gt;</span><span class="pln">
 </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="string"><span class="atv">"body"</span></span><span class="tag">&gt;</span><span class="pln">{{body}}</span><span class="tag">&lt;/div&gt;</span></code></pre><p>Now, we can use the <code>{{blog-post}}</code> component and pass it properties
@@ -209,8 +208,9 @@ form:</p><pre><code class="lang-app/templates/index.hbs prettyprint prettyprinte
 </span><span class="pun">{{/</span><span class="pln">blog</span><span class="pun">-</span><span class="pln">post</span><span class="pun">}}</span></code></pre><p>It’s important to note that the template scope inside the component
 block is the same as outside. If a property is available in the template
 outside the component, it is also available inside the component block.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/components/wrapping-content-in-a-component.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/components/wrapping-content-in-a-component.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -222,13 +222,8 @@ outside the component, it is also available inside the component block.</p></div
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/components/wrapping-content-in-a-component.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/components/wrapping-content-in-a-component.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

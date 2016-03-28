@@ -179,12 +179,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-bug-fixes-item" class="level-3"><a id="-bug-fixes-link" href="./v2.0.0/contributing/adding-new-features.html#-bug-fixes" class="level-3" pref="#-bug-fixes">Bug Fixes</a></li></ul></li><li id="-features-item" class="level-3"><a id="-features-link" href="./v2.0.0/contributing/adding-new-features.html#-features" class="level-3" pref="#-features">Features</a></li><li id="-builds-item" class="level-3"><a id="-builds-link" href="./v2.0.0/contributing/adding-new-features.html#-builds" class="level-3" pref="#-builds">Builds</a></li><li id="-featuresjson-item" class="level-3"><a id="-featuresjson-link" href="./v2.0.0/contributing/adding-new-features.html#-featuresjson" class="level-3" pref="#-featuresjson">features.json</a></li><li id="-travis-testing-item" class="level-3"><a id="-travis-testing-link" href="./v2.0.0/contributing/adding-new-features.html#-travis-testing" class="level-3" pref="#-travis-testing">Travis Testing</a></li><li id="-gono-go-process-item" class="level-3"><a id="-gono-go-process-link" href="./v2.0.0/contributing/adding-new-features.html#-gono-go-process" class="level-3" pref="#-gono-go-process">Go/No-Go Process</a></li><li id="-beta-releases-item" class="level-3"><a id="-beta-releases-link" href="./v2.0.0/contributing/adding-new-features.html#-beta-releases" class="level-3" pref="#-beta-releases">Beta Releases</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>In general, new feature development should be done on master.</p><p>Bugfixes should not introduce new APIs or break existing APIs, and do
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>In general, new feature development should be done on master.</p><p>Bugfixes should not introduce new APIs or break existing APIs, and do
 not need feature flags.</p><p>Features can introduce new APIs, and need feature flags. They should not
 be applied to the release or beta branches, since SemVer requires
 bumping the minor version to introduce new features.</p><p>Security fixes should not introduce new APIs, but may, if strictly
@@ -251,8 +250,9 @@ opportunity for a feature to make it soon enough.</p><p>Once this is done, the m
 <code>features.json</code> file is added with the features that are ready.</p><h3 id="-beta-releases">Beta Releases</h3><p>Every week, we repeat the Go/No-Go process for the features that remain
 on the beta branch. Any feature that has become unready is removed from
 the features.json.</p><p>Once this is done, a Beta release is tagged and pushed.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/contributing/adding-new-features.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/contributing/adding-new-features.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -264,13 +264,8 @@ the features.json.</p><p>Once this is done, a Beta release is tagged and pushed.
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/contributing/adding-new-features.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/contributing/adding-new-features.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

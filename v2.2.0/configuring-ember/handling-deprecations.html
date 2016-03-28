@@ -154,12 +154,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-filtering-deprecations-item" class="level-2"><a id="-filtering-deprecations-link" href="./v2.2.0/configuring-ember/handling-deprecations.html#-filtering-deprecations" class="level-2" pref="#-filtering-deprecations">Filtering Deprecations</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-deprecation-workflow-item" class="level-2"><a id="-deprecation-workflow-link" href="./v2.2.0/configuring-ember/handling-deprecations.html#-deprecation-workflow" class="level-2" pref="#-deprecation-workflow">Deprecation Workflow</a><ul class="level-3" id="-deprecation-workflow-list"><li id="-deprecation-workflow-1-gather-deprecations-into-one-source-item" class="level-3"><a id="-deprecation-workflow-1-gather-deprecations-into-one-source-link" href="./v2.2.0/configuring-ember/handling-deprecations.html#-deprecation-workflow-1-gather-deprecations-into-one-source" class="level-3" pref="#-deprecation-workflow-1-gather-deprecations-into-one-source">1. Gather deprecations into one source</a></li><li id="-deprecation-workflow-2-turn-on-a-deprecation-item" class="level-3"><a id="-deprecation-workflow-2-turn-on-a-deprecation-link" href="./v2.2.0/configuring-ember/handling-deprecations.html#-deprecation-workflow-2-turn-on-a-deprecation" class="level-3" pref="#-deprecation-workflow-2-turn-on-a-deprecation">2. “Turn on” a deprecation</a></li><li id="-deprecation-workflow-3-fix-and-repeat-item" class="level-3"><a id="-deprecation-workflow-3-fix-and-repeat-link" href="./v2.2.0/configuring-ember/handling-deprecations.html#-deprecation-workflow-3-fix-and-repeat" class="level-3" pref="#-deprecation-workflow-3-fix-and-repeat">3. Fix and Repeat</a></li></ul></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-silencing-deprecation-warnings-during-compile-item" class="level-2"><a id="-silencing-deprecation-warnings-during-compile-link" href="./v2.2.0/configuring-ember/handling-deprecations.html#-silencing-deprecation-warnings-during-compile" class="level-2" pref="#-silencing-deprecation-warnings-during-compile">Silencing Deprecation Warnings During Compile</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-deprecation-handling-in-ember-inspector-item" class="level-2"><a id="-deprecation-handling-in-ember-inspector-link" href="./v2.2.0/configuring-ember/handling-deprecations.html#-deprecation-handling-in-ember-inspector" class="level-2" pref="#-deprecation-handling-in-ember-inspector">Deprecation Handling in Ember Inspector</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>A valuable attribute of the Ember framework is its use of <a href="http://semver.org/">Semantic Versioning</a> to aid projects in keeping up with
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>A valuable attribute of the Ember framework is its use of <a href="http://semver.org/">Semantic Versioning</a> to aid projects in keeping up with
 changes to the framework.  Before any functionality or API is removed it first goes through a deprecation period where the functionality is
 still supported, but usage of it generates a warning logged to the browser console.  These warnings can pile up between major releases to a point where the amount of
 deprecation warnings that scroll through the console becomes overwhelming.</p><p><img width="675px" title="Deprecations Clouding up the Browser JavaScript Console" src="../../images/guides/configuring-ember/handling-deprecations/deprecations-in-console.png"></p><p>Fortunately, Ember provides a way for projects to deal with deprecations in an organized and efficient manner.</p><h2 id="-filtering-deprecations">Filtering Deprecations</h2><p>When your project has a lot of deprecations, you can start by filtering out deprecations that do not have to be addressed right away.  You
@@ -224,8 +223,9 @@ warnings during compile is to install the <a href="http://emberobserver.com/addo
 template deprecation warnings during compile in favor of showing them in the browser console during test suite execution or application usage.</p><h2 id="-deprecation-handling-in-ember-inspector">Deprecation Handling in Ember Inspector</h2><p>Ember Inspector also provides deprecation handling capability.  It can work complimentary to ember-cli-deprecation-workflow.  As you unsilence deprecations to
 fix them, the inspector can allow you to more quickly find where in your code a deprecation occurs when you run into it at runtime, reducing the amount of
 stack trace browsing you have to do.  For more information on using deprecation handling in Ember Inspector, see its <a href="../../ember-inspector/deprecations/">guides section</a>.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/configuring-ember/handling-deprecations.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/configuring-ember/handling-deprecations.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -237,13 +237,8 @@ stack trace browsing you have to do.  For more information on using deprecation 
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/configuring-ember/handling-deprecations.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/configuring-ember/handling-deprecations.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

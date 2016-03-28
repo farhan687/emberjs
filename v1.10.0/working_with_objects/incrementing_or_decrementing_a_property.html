@@ -206,14 +206,14 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-problem-item" class="level-3"><a id="-problem-link" href="./v1.10.0/working_with_objects/incrementing_or_decrementing_a_property.html#-problem" class="level-3" pref="#-problem">Problem</a></li></ul></li><li id="-solution-item" class="level-3"><a id="-solution-link" href="./v1.10.0/working_with_objects/incrementing_or_decrementing_a_property.html#-solution" class="level-3" pref="#-solution">Solution</a></li><li id="-discussion-item" class="level-3"><a id="-discussion-link" href="./v1.10.0/working_with_objects/incrementing_or_decrementing_a_property.html#-discussion" class="level-3" pref="#-discussion">Discussion</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You want to increment or decrement a property.</p><h3 id="-solution">Solution</h3><p>Use the <code>incrementProperty</code> or <code>decrementProperty</code> methods of <code>Ember.Object</code>.</p><p>To increment:</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">person</span><span class="pun">.</span><span class="pln">incrementProperty</span><span class="pun">(</span><span class="string"><span class="str">'age'</span></span><span class="pun">);</span></code></pre><p>To decrement:</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">person</span><span class="pun">.</span><span class="pln">decrementProperty</span><span class="pun">(</span><span class="string"><span class="str">'age'</span></span><span class="pun">);</span></code></pre><h3 id="-discussion">Discussion</h3><p>You can optionally specify a value to increment or decrement by:</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">person</span><span class="pun">.</span><span class="pln">incrementProperty</span><span class="pun">(</span><span class="string"><span class="str">'age'</span></span><span class="pun">,</span><span class="pln"> </span><span class="number"><span class="lit">10</span></span><span class="pun">);</span></code></pre><h4>Example</h4><p><a class="jsbin-embed" href="http://emberjs.jsbin.com/aTipaQO/2/edit?js,output">JS Bin</a></p></div>
-	
-	<div class="footer">
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You want to increment or decrement a property.</p><h3 id="-solution">Solution</h3><p>Use the <code>incrementProperty</code> or <code>decrementProperty</code> methods of <code>Ember.Object</code>.</p><p>To increment:</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">person</span><span class="pun">.</span><span class="pln">incrementProperty</span><span class="pun">(</span><span class="string"><span class="str">'age'</span></span><span class="pun">);</span></code></pre><p>To decrement:</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">person</span><span class="pun">.</span><span class="pln">decrementProperty</span><span class="pun">(</span><span class="string"><span class="str">'age'</span></span><span class="pun">);</span></code></pre><h3 id="-discussion">Discussion</h3><p>You can optionally specify a value to increment or decrement by:</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="pln">person</span><span class="pun">.</span><span class="pln">incrementProperty</span><span class="pun">(</span><span class="string"><span class="str">'age'</span></span><span class="pun">,</span><span class="pln"> </span><span class="number"><span class="lit">10</span></span><span class="pun">);</span></code></pre><h4>Example</h4><p><a class="jsbin-embed" href="http://emberjs.jsbin.com/aTipaQO/2/edit?js,output">JS Bin</a></p></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/incrementing_or_decrementing_a_property.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/incrementing_or_decrementing_a_property.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -225,13 +225,8 @@
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/incrementing_or_decrementing_a_property.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/incrementing_or_decrementing_a_property.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

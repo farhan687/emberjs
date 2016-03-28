@@ -206,7 +206,26 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index -->
+<div role="flatdoc" class="content-root ng-scope ng-hide" data-ng-show="!index">
+  <div class="menubar">
+    <div class="menu section" role="flatdoc-menu"></div>
+  </div>
+  <div role="flatdoc-content" class="content"></div>
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="" target="_blank">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left disabled">
+					<a href="" class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right disabled">
+					<a href="" class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- ngIf: index --><div class="index-container ng-scope" data-ng-if="index">
 	<div class="container">
 		<div class="row">
@@ -214,30 +233,29 @@
 				user_interface_and_interaction
 			</h1>
 		</div>
-		<ul class="row">
-			<!-- ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+		<ul class="row indexList">
+			<!-- ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
 				<a href=./v1.10.0/user_interface_and_interaction/adding_css_classes_to_your_components.html class="col-xs-12 ng-binding">adding_css_classes_to_your_components</a>
-			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
 				<a href=./v1.10.0/user_interface_and_interaction/adding_css_classes_to_your_components_based_on_properties.html class="col-xs-12 ng-binding">adding_css_classes_to_your_components_based_on_properties</a>
-			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
 				<a href=./v1.10.0/user_interface_and_interaction/basic_form_validations.html class="col-xs-12 ng-binding">basic_form_validations</a>
-			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
 				<a href=./v1.10.0/user_interface_and_interaction/converting_strings_to_currency_with_accounting_js.html class="col-xs-12 ng-binding">converting_strings_to_currency_with_accounting_js</a>
-			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
 				<a href=./v1.10.0/user_interface_and_interaction/displaying_formatted_dates_with_moment_js.html class="col-xs-12 ng-binding">displaying_formatted_dates_with_moment_js</a>
-			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
 				<a href=./v1.10.0/user_interface_and_interaction/focusing_a_textfield_after_its_been_inserted.html class="col-xs-12 ng-binding">focusing_a_textfield_after_its_been_inserted</a>
-			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
 				<a href=./v1.10.0/user_interface_and_interaction/resetting_scroll_on_route_changes.html class="col-xs-12 ng-binding">resetting_scroll_on_route_changes</a>
-			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
 				<a href=./v1.10.0/user_interface_and_interaction/specifying_data_driven_areas_of_templates_that_do_not_need_to_update.html class="col-xs-12 ng-binding">specifying_data_driven_areas_of_templates_that_do_not_need_to_update</a>
-			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
+			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><li class="col-xs-12 indexLi ng-scope" data-ng-repeat="file in indexList" data-ng-if="file.name != 'index'">
 				<a href=./v1.10.0/user_interface_and_interaction/using_modal_dialogs.html class="col-xs-12 ng-binding">using_modal_dialogs</a>
 			</li><!-- end ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList --><!-- ngIf: file.name != 'index' --><!-- end ngRepeat: file in indexList -->
 		</ul>
 	</div>
-</div><!-- end ngIf: index -->
-</div>
+</div><!-- end ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

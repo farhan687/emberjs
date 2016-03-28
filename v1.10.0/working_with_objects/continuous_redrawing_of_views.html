@@ -206,12 +206,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-problem-item" class="level-2"><a id="-problem-link" href="./v1.10.0/working_with_objects/continuous_redrawing_of_views.html#-problem" class="level-2" pref="#-problem">Problem</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-solution-item" class="level-2"><a id="-solution-link" href="./v1.10.0/working_with_objects/continuous_redrawing_of_views.html#-solution" class="level-2" pref="#-solution">Solution</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-discussion-item" class="level-2"><a id="-discussion-link" href="./v1.10.0/working_with_objects/continuous_redrawing_of_views.html#-discussion" class="level-2" pref="#-discussion">Discussion</a><ul class="level-3" id="-discussion-list"><li id="-discussion-clockservice-object-item" class="level-3"><a id="-discussion-clockservice-object-link" href="./v1.10.0/working_with_objects/continuous_redrawing_of_views.html#-discussion-clockservice-object" class="level-3" pref="#-discussion-clockservice-object">ClockService object</a></li><li id="-discussion-binding-to-the-pulse-attribute-item" class="level-3"><a id="-discussion-binding-to-the-pulse-attribute-link" href="./v1.10.0/working_with_objects/continuous_redrawing_of_views.html#-discussion-binding-to-the-pulse-attribute" class="level-3" pref="#-discussion-binding-to-the-pulse-attribute">Binding to the pulse attribute</a></li><li id="-discussion-handlebars-template-which-displays-the-pulse-item" class="level-3"><a id="-discussion-handlebars-template-which-displays-the-pulse-link" href="./v1.10.0/working_with_objects/continuous_redrawing_of_views.html#-discussion-handlebars-template-which-displays-the-pulse" class="level-3" pref="#-discussion-handlebars-template-which-displays-the-pulse">Handlebars template which displays the pulse</a></li><li id="-discussion-handlebars-helper-to-format-the-clock-display-hms-item" class="level-3"><a id="-discussion-handlebars-helper-to-format-the-clock-display-hms-link" href="./v1.10.0/working_with_objects/continuous_redrawing_of_views.html#-discussion-handlebars-helper-to-format-the-clock-display-hms" class="level-3" pref="#-discussion-handlebars-helper-to-format-the-clock-display-hms">Handlebars helper to format the clock display (h:m:s)</a></li><li id="-discussion-note-item" class="level-3"><a id="-discussion-note-link" href="./v1.10.0/working_with_objects/continuous_redrawing_of_views.html#-discussion-note" class="level-3" pref="#-discussion-note">Note</a></li><li id="-discussion-links-item" class="level-3"><a id="-discussion-links-link" href="./v1.10.0/working_with_objects/continuous_redrawing_of_views.html#-discussion-links" class="level-3" pref="#-discussion-links">Links</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h2 id="-problem">Problem</h2><p>You’d like to redraw your views every few seconds/minutes e.g. to update
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h2 id="-problem">Problem</h2><p>You’d like to redraw your views every few seconds/minutes e.g. to update
 relative timestamps (like on twitter.com).</p><h2 id="-solution">Solution</h2><p>Have a clock object with a <code>pulse</code> attribute in your application which 
 increments using a timed interval. You want to let view(s) bind values to be
 refreshed when the <code>pulse</code> attribute increments.</p><p>The clock object can be used to create new instances for binding to new views
@@ -327,8 +326,9 @@ after waking.</p><h3 id="-discussion-links">Links</h3><p>The source code:</p><ul
 <li><a href="../../components/defining-a-component/">Defining a Component</a></li>
 <li><a href="http://emberjs.com/api/classes/Ember.ArrayController.html">Ember Array Controller</a></li>
 </ul></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/continuous_redrawing_of_views.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/continuous_redrawing_of_views.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -340,13 +340,8 @@ after waking.</p><h3 id="-discussion-links">Links</h3><p>The source code:</p><ul
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/continuous_redrawing_of_views.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/working_with_objects/continuous_redrawing_of_views.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

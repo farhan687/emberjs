@@ -154,12 +154,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-application-initializers-item" class="level-2"><a id="-application-initializers-link" href="./v2.2.0/applications/initializers.html#-application-initializers" class="level-2" pref="#-application-initializers">Application Initializers</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-application-instance-initializers-item" class="level-2"><a id="-application-instance-initializers-link" href="./v2.2.0/applications/initializers.html#-application-instance-initializers" class="level-2" pref="#-application-instance-initializers">Application Instance Initializers</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-specifying-initializer-order-item" class="level-2"><a id="-specifying-initializer-order-link" href="./v2.2.0/applications/initializers.html#-specifying-initializer-order" class="level-2" pref="#-specifying-initializer-order">Specifying Initializer Order</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Initializers provide an opportunity to configure your application as it boots.</p><p>There are two types of initializers: application initializers and application instance initializers.</p><p>Application initializers are run as your application boots,
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Initializers provide an opportunity to configure your application as it boots.</p><p>There are two types of initializers: application initializers and application instance initializers.</p><p>Application initializers are run as your application boots,
 and provide the primary means to configure <a href="../dependency-injection">dependency injections</a> in your application.</p><p>Application instance initializers are run as an application instance is loaded.
 They provide a way to configure the initial state of your application,
 as well as to set up dependency injections that are local to the application instance
@@ -202,8 +201,9 @@ which allows for DOM interaction while waiting for conditions to resolve.</p><h2
   initialize</span><span class="pun">:</span><span class="pln"> initialize
 </span><span class="pun">};</span></code></pre><p>Note that ordering only applies to initializers of the same type (i.e. application or application instance).
 Application initializers will always run before application instance initializers.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/applications/initializers.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/applications/initializers.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -215,13 +215,8 @@ Application initializers will always run before application instance initializer
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/applications/initializers.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/applications/initializers.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

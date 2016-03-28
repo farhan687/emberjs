@@ -206,12 +206,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-about-features-item" class="level-2"><a id="-about-features-link" href="./v1.10.0/configuring-ember/feature-flags.html#-about-features" class="level-2" pref="#-about-features">About Features</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-feature-life-cycle-item" class="level-2"><a id="-feature-life-cycle-link" href="./v1.10.0/configuring-ember/feature-flags.html#-feature-life-cycle" class="level-2" pref="#-feature-life-cycle">Feature Life-Cycle</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-flagging-details-item" class="level-2"><a id="-flagging-details-link" href="./v1.10.0/configuring-ember/feature-flags.html#-flagging-details" class="level-2" pref="#-flagging-details">Flagging Details</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-feature-listing-featuresmd-item" class="level-2"><a id="-feature-listing-featuresmd-link" href="./v1.10.0/configuring-ember/feature-flags.html#-feature-listing-featuresmd" class="level-2" pref="#-feature-listing-featuresmd">Feature Listing (FEATURES.md)</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-enabling-at-runtime-item" class="level-2"><a id="-enabling-at-runtime-link" href="./v1.10.0/configuring-ember/feature-flags.html#-enabling-at-runtime" class="level-2" pref="#-enabling-at-runtime">Enabling At Runtime</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h2 id="-about-features">About Features</h2><p>When a new feature is added to Ember they will be written in such a way that the
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h2 id="-about-features">About Features</h2><p>When a new feature is added to Ember they will be written in such a way that the
 feature can be conditionally included in the generated build output and enabled
 (or completely removed) based on whether a particular flag is present. This
 allows newly developed features to be selectively released when they are
@@ -246,8 +245,9 @@ will be enabled based on the flag value. <strong>Ember only reads</strong> the
 <code>EmberENV</code> value upon initial load so setting this value after Ember has
 been loaded will have no affect.</p><p>Example:</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="typ">EmberENV</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">FEATURES</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="string"><span class="str">'link-to'</span></span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">}};</span></code></pre><p>Additionally you can define <code>EmberENV.ENABLE_ALL_FEATURES</code> to force all
 features to be enabled.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/configuring-ember/feature-flags.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/configuring-ember/feature-flags.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -259,13 +259,8 @@ features to be enabled.</p></div>
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/configuring-ember/feature-flags.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/configuring-ember/feature-flags.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

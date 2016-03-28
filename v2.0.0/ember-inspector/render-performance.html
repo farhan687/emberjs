@@ -179,19 +179,19 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-accuracy-item" class="level-3"><a id="-accuracy-link" href="./v2.0.0/ember-inspector/render-performance.html#-accuracy" class="level-3" pref="#-accuracy">Accuracy</a></li></ul></li><li id="-toolbar-item" class="level-3"><a id="-toolbar-link" href="./v2.0.0/ember-inspector/render-performance.html#-toolbar" class="level-3" pref="#-toolbar">Toolbar</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>You can use the Inspector to measure your app’s render times. Click on <code>Render Performance</code> to start inspecting render times.</p><p><img src="../../images/guides/ember-inspector/render-performance-screenshot.png" width="680"></p><h3 id="-accuracy">Accuracy</h3><p>Using the Inspector adds a delay to your rendering, so the durations you see
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>You can use the Inspector to measure your app’s render times. Click on <code>Render Performance</code> to start inspecting render times.</p><p><img src="../../images/guides/ember-inspector/render-performance-screenshot.png" width="680"></p><h3 id="-accuracy">Accuracy</h3><p>Using the Inspector adds a delay to your rendering, so the durations you see
 are not an accurate representation of the speed of your production apps. Use these
 times to compare durations and debug rendering bottlenecks, but not as
 a way to accurately measure rendering times.</p><h3 id="-toolbar">Toolbar</h3><p>Click on the “clear” icon to remove existing render logs.</p><p>To measure components and templates that are rendered on initial application boot,
 click on the “Reload” button at the top. This button ensures that the Inspector starts
 measuring render times when your app boots.</p><p>To filter the logs, type a query in the search box.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/render-performance.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/render-performance.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -203,13 +203,8 @@ measuring render times when your app boots.</p><p>To filter the logs, type a que
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/render-performance.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/render-performance.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

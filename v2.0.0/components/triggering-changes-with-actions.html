@@ -179,12 +179,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-creating-the-component-item" class="level-2"><a id="-creating-the-component-link" href="./v2.0.0/components/triggering-changes-with-actions.html#-creating-the-component" class="level-2" pref="#-creating-the-component">Creating the Component</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-designing-the-action-item" class="level-2"><a id="-designing-the-action-link" href="./v2.0.0/components/triggering-changes-with-actions.html#-designing-the-action" class="level-2" pref="#-designing-the-action">Designing the Action</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-implementing-the-action-item" class="level-2"><a id="-implementing-the-action-link" href="./v2.0.0/components/triggering-changes-with-actions.html#-implementing-the-action" class="level-2" pref="#-implementing-the-action">Implementing the Action</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-designing-the-child-component-item" class="level-2"><a id="-designing-the-child-component-link" href="./v2.0.0/components/triggering-changes-with-actions.html#-designing-the-child-component" class="level-2" pref="#-designing-the-child-component">Designing the Child Component</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-passing-the-action-to-the-component-item" class="level-2"><a id="-passing-the-action-to-the-component-link" href="./v2.0.0/components/triggering-changes-with-actions.html#-passing-the-action-to-the-component" class="level-2" pref="#-passing-the-action-to-the-component">Passing the Action to the Component</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>You can think of a component as a black box of UI functionality.
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>You can think of a component as a black box of UI functionality.
 So far, you’ve learned how parent components can pass attributes in to a
 child component, and how that component can use those attributes from
 both JavaScript and its template.</p><p>But what about the opposite direction? How does data flow back out of
@@ -255,8 +254,9 @@ just like passing an attribute, but you use the <code>action</code> helper to pa
 a function instead.</p><p>Actions in components allow you to
 decouple an event happening from how it’s handled, leading to modular,
 more reusable components.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/components/triggering-changes-with-actions.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/components/triggering-changes-with-actions.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -268,13 +268,8 @@ more reusable components.</p></div>
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/components/triggering-changes-with-actions.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/components/triggering-changes-with-actions.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

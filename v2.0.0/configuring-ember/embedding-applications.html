@@ -179,12 +179,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-changing-the-root-element-item" class="level-3"><a id="-changing-the-root-element-link" href="./v2.0.0/configuring-ember/embedding-applications.html#-changing-the-root-element" class="level-3" pref="#-changing-the-root-element">Changing the Root Element</a></li></ul></li><li id="-disabling-url-management-item" class="level-3"><a id="-disabling-url-management-link" href="./v2.0.0/configuring-ember/embedding-applications.html#-disabling-url-management" class="level-3" pref="#-disabling-url-management">Disabling URL Management</a></li><li id="-specifying-a-root-url-item" class="level-3"><a id="-specifying-a-root-url-link" href="./v2.0.0/configuring-ember/embedding-applications.html#-specifying-a-root-url" class="level-3" pref="#-specifying-a-root-url">Specifying a Root URL</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>In most cases, your application’s entire UI will be created by templates
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>In most cases, your application’s entire UI will be created by templates
 that are managed by the router.</p><p>But what if you have an Ember.js app that you need to embed into an
 existing page, or run alongside other JavaScript frameworks, or serve from the
 same domain as another app?</p><h3 id="-changing-the-root-element">Changing the Root Element</h3><p>By default, your application will render the <a href="../../templates/the-application-template">application template</a>
@@ -200,8 +199,9 @@ router’s <code>location</code></a> to
 </span><span class="pun">};</span></code></pre><h3 id="-specifying-a-root-url">Specifying a Root URL</h3><p>If your Ember application is one of multiple web applications served from the same domain, it may be necessary to indicate to the router what the root URL for your Ember application is. By default, Ember will assume it is served from the root of your domain.</p><p>For example, if you wanted to serve your blogging application from <code>http://emberjs.com/blog/</code>, it would be necessary to specify a root URL of <code>/blog/</code>.</p><p>This can be achieved by setting the <code>rootURL</code> on the router:</p><pre><code class="lang-app/router.js prettyprint prettyprinted" style=""><span class="typ">Ember</span><span class="pun">.</span><span class="typ">Router</span><span class="pun">.</span><span class="pln">extend</span><span class="pun">({</span><span class="pln">
   rootURL</span><span class="pun">:</span><span class="pln"> </span><span class="string"><span class="str">'/blog/'</span></span><span class="pln">
 </span><span class="pun">});</span></code></pre></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/embedding-applications.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/embedding-applications.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -213,13 +213,8 @@ router’s <code>location</code></a> to
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/embedding-applications.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/embedding-applications.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

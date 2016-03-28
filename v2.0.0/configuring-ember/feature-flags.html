@@ -155,7 +155,7 @@
 
     <ul class="nav navbar-nav navbar-right">
        <li class="dropdown search-dropdown">
-        <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+        <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><span class="twitter-typeahead" style="position: relative; display: inline-block; "><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" style="position: absolute; top: 0px; left: 0px; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size:  ; background-position: 0% 0%; background-repeat: repeat repeat; " readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent; "><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none; "></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; "><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
       </li>
       <li class="dropdown">
         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -179,12 +179,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-feature-life-cycle-item" class="level-2"><a id="-feature-life-cycle-link" href="./v2.0.0/configuring-ember/feature-flags.html#-feature-life-cycle" class="level-2" pref="#-feature-life-cycle">Feature Life-Cycle</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-flagging-details-item" class="level-2"><a id="-flagging-details-link" href="./v2.0.0/configuring-ember/feature-flags.html#-flagging-details" class="level-2" pref="#-flagging-details">Flagging Details</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-feature-listing-featuresmd-item" class="level-2"><a id="-feature-listing-featuresmd-link" href="./v2.0.0/configuring-ember/feature-flags.html#-feature-listing-featuresmd" class="level-2" pref="#-feature-listing-featuresmd">Feature Listing (FEATURES.md)</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-enabling-at-runtime-item" class="level-2"><a id="-enabling-at-runtime-link" href="./v2.0.0/configuring-ember/feature-flags.html#-enabling-at-runtime" class="level-2" pref="#-enabling-at-runtime">Enabling At Runtime</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>New features are added to Ember.js within conditional statements.</p><p>Code behind these flags can be conditionally enabled
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>New features are added to Ember.js within conditional statements.</p><p>Code behind these flags can be conditionally enabled
 (or completely removed) based on your project’s configuration. This
 allows newly developed features to be selectively released when the
 Ember.js community considers them ready for production use.</p><h2 id="-feature-life-cycle">Feature Life-Cycle</h2><p>A newly-flagged feature is only available in canary builds and can be enabled
@@ -215,8 +214,9 @@ by setting its flag value to <code>true</code> before your application boots:</p
   </span><span class="pun">}</span><span class="pln">
 </span><span class="pun">};</span></code></pre><p>For the truly ambitious developer, setting <code>ENV.EmberENV.ENABLE_ALL_FEATURES</code> to <code>true</code> will enable all
 experimental features.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/feature-flags.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/feature-flags.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -228,13 +228,8 @@ experimental features.</p></div>
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/feature-flags.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/feature-flags.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

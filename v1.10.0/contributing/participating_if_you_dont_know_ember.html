@@ -206,17 +206,17 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-problem-item" class="level-3"><a id="-problem-link" href="./v1.10.0/contributing/participating_if_you_dont_know_ember.html#-problem" class="level-3" pref="#-problem">Problem</a></li></ul></li><li id="-solution-item" class="level-3"><a id="-solution-link" href="./v1.10.0/contributing/participating_if_you_dont_know_ember.html#-solution" class="level-3" pref="#-solution">Solution</a></li><li id="-discussion-item" class="level-3"><a id="-discussion-link" href="./v1.10.0/contributing/participating_if_you_dont_know_ember.html#-discussion" class="level-3" pref="#-discussion">Discussion</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You are new to Ember, but want to help write the Cookbook.</p><h3 id="-solution">Solution</h3><p>Suggest and/or submit pull requests with a <em>problem</em> statement (see <a href="./suggesting_a_recipe">Suggesting A Recipe</a>). You do not need to worry about providing a solution or discussion. Someone more experienced with Ember will be able to take your <em>problem</em> and provide a <em>solution</em> and <em>discussion</em>.</p><h3 id="-discussion">Discussion</h3><p>The first version of the Ember Cookbook will be completed in a few phases. First, we will be accepting
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You are new to Ember, but want to help write the Cookbook.</p><h3 id="-solution">Solution</h3><p>Suggest and/or submit pull requests with a <em>problem</em> statement (see <a href="./suggesting_a_recipe">Suggesting A Recipe</a>). You do not need to worry about providing a solution or discussion. Someone more experienced with Ember will be able to take your <em>problem</em> and provide a <em>solution</em> and <em>discussion</em>.</p><h3 id="-discussion">Discussion</h3><p>The first version of the Ember Cookbook will be completed in a few phases. First, we will be accepting
 recipe suggestions. You can suggest a recipe by forking this repository and submitting a pull request
 (see <em>Suggesting a Recipe</em>). Once we have written recipes, we’ll be asking for help to proofread and test
 them.</p><p>See <a href="https://help.github.com/articles/be-social#watch-a-project">“Watch a project”</a> on Github for information on watching projects.</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/contributing/participating_if_you_dont_know_ember.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/contributing/participating_if_you_dont_know_ember.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -228,13 +228,8 @@ them.</p><p>See <a href="https://help.github.com/articles/be-social#watch-a-proj
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/contributing/participating_if_you_dont_know_ember.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/contributing/participating_if_you_dont_know_ember.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

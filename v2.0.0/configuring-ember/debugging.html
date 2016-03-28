@@ -179,12 +179,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-routing-item" class="level-2"><a id="-routing-link" href="./v2.0.0/configuring-ember/debugging.html#-routing" class="level-2" pref="#-routing">Routing</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-views-templates-item" class="level-2"><a id="-views-templates-link" href="./v2.0.0/configuring-ember/debugging.html#-views-templates" class="level-2" pref="#-views-templates">Views / Templates</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-controllers-item" class="level-2"><a id="-controllers-link" href="./v2.0.0/configuring-ember/debugging.html#-controllers" class="level-2" pref="#-controllers">Controllers</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-observers-binding-item" class="level-2"><a id="-observers-binding-link" href="./v2.0.0/configuring-ember/debugging.html#-observers-binding" class="level-2" pref="#-observers-binding">Observers / Binding</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-miscellaneous-item" class="level-2"><a id="-miscellaneous-link" href="./v2.0.0/configuring-ember/debugging.html#-miscellaneous" class="level-2" pref="#-miscellaneous">Miscellaneous</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Ember provides several configuration options that can help you debug problems
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>Ember provides several configuration options that can help you debug problems
 with your application.</p><h2 id="-routing">Routing</h2><h4>Log router transitions</h4><pre><code class="lang-app/app.js prettyprint prettyprinted" style=""><span class="kwd">export</span><span class="pln"> </span><span class="kwd">default</span><span class="pln"> </span><span class="typ">Ember</span><span class="pun">.</span><span class="typ">Application</span><span class="pun">.</span><span class="pln">extend</span><span class="pun">({</span><span class="pln">
   </span><span class="comment"><span class="com">// Basic logging, e.g. </span><span class="string"><span class="com">"Transitioned into </span><span class="string"><span class="com">'post'</span></span><span class="com">"</span></span></span><span class="pln">
   LOG_TRANSITIONS</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
@@ -224,8 +223,9 @@ console.</p><pre><code class="lang-app/app.js prettyprint prettyprinted" style="
 </span><span class="pun">});</span></code></pre><h4>Errors within <code>Ember.run.later</code> (<a href="https://github.com/ebryn/backburner.js">Backburner.js</a>)</h4><p>Backburner has support for stitching the stacktraces together so that you can
 track down where an erroring <code>Ember.run.later</code> is being initiated from. Unfortunately,
 this is quite slow and is not appropriate for production or even normal development.</p><p>To enable this mode you can set:</p><pre><code class="lang-javascript prettyprint prettyprinted" style=""><span class="typ">Ember</span><span class="pun">.</span><span class="pln">run</span><span class="pun">.</span><span class="pln">backburner</span><span class="pun">.</span><span class="pln">DEBUG </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span></code></pre></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/debugging.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/debugging.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -237,13 +237,8 @@ this is quite slow and is not appropriate for production or even normal developm
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/debugging.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/debugging.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

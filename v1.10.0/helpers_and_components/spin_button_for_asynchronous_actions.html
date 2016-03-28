@@ -206,12 +206,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-problem-item" class="level-3"><a id="-problem-link" href="./v1.10.0/helpers_and_components/spin_button_for_asynchronous_actions.html#-problem" class="level-3" pref="#-problem">Problem</a></li></ul></li><li id="-solution-item" class="level-3"><a id="-solution-link" href="./v1.10.0/helpers_and_components/spin_button_for_asynchronous_actions.html#-solution" class="level-3" pref="#-solution">Solution</a></li><li id="-discussion-item" class="level-3"><a id="-discussion-link" href="./v1.10.0/helpers_and_components/spin_button_for_asynchronous_actions.html#-discussion" class="level-3" pref="#-discussion">Discussion</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You want a button component that spins to show asynchronous action till completion. Eg- Save Button.</p><h3 id="-solution">Solution</h3><p>Write an Ember Component to change to loading state when action is taking place.</p><p>For example a button to save data could be as</p><pre><code class="lang-handlebars prettyprint prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="string"><span class="atv">'text/x-handlebars'</span></span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="string"><span class="atv">'application'</span></span><span class="tag">&gt;</span><span class="pln">
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You want a button component that spins to show asynchronous action till completion. Eg- Save Button.</p><h3 id="-solution">Solution</h3><p>Write an Ember Component to change to loading state when action is taking place.</p><p>For example a button to save data could be as</p><pre><code class="lang-handlebars prettyprint prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="string"><span class="atv">'text/x-handlebars'</span></span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="string"><span class="atv">'application'</span></span><span class="tag">&gt;</span><span class="pln">
     </span><span class="pun">{{</span><span class="pln">spin</span><span class="pun">-</span><span class="pln">button id</span><span class="pun">=</span><span class="string"><span class="str">"forapplication"</span></span><span class="pln"> isLoading </span><span class="pun">=</span><span class="pln"> isLoading buttonText</span><span class="pun">=</span><span class="pln">buttonText action</span><span class="pun">=</span><span class="string"><span class="str">'saveData'</span></span><span class="pun">}}</span><span class="pln">
 </span><span class="tag">&lt;/script&gt;</span><span class="pln">
 
@@ -256,8 +255,9 @@
 The component is in charge of setting isLoading = true and the base controller performing asynchronous action decides when the ‘isLoading’ becomes false again.
 For safety and sanity of the component, one can add a settimeout of however much time and then set ‘isLoading’ back to false so that the components comes to initial state no matter the result of the asynchronous call. But I would prefer it was properly handled in the parent controller.
 Also note that the component does not let multiple clicks get in the way of loading status.</p><h4>Example</h4><p><iframe class="" id="" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); width: 100%; min-height: 300px; " data-url="http://emberjs.jsbin.com/EXaxEfE/14/embed?live" src="https://jsbin.com/embed-holding"></iframe><script src="http://static.jsbin.com/js/embed.js"></script></p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/helpers_and_components/spin_button_for_asynchronous_actions.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/helpers_and_components/spin_button_for_asynchronous_actions.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -269,13 +269,8 @@ Also note that the component does not let multiple clicks get in the way of load
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/helpers_and_components/spin_button_for_asynchronous_actions.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/helpers_and_components/spin_button_for_asynchronous_actions.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>

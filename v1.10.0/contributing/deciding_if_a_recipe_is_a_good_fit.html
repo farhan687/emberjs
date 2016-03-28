@@ -206,12 +206,11 @@
   </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<!-- ngIf: !index --><div role="flatdoc" class="content-root ng-scope" data-ng-if="!index">
+<div role="flatdoc" class="content-root ng-scope" data-ng-show="!index">
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-problem-item" class="level-3"><a id="-problem-link" href="./v1.10.0/contributing/deciding_if_a_recipe_is_a_good_fit.html#-problem" class="level-3" pref="#-problem">Problem</a></li></ul></li><li id="-solution-item" class="level-3"><a id="-solution-link" href="./v1.10.0/contributing/deciding_if_a_recipe_is_a_good_fit.html#-solution" class="level-3" pref="#-solution">Solution</a></li><li id="-discussion-item" class="level-3"><a id="-discussion-link" href="./v1.10.0/contributing/deciding_if_a_recipe_is_a_good_fit.html#-discussion" class="level-3" pref="#-discussion">Discussion</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div class="content">
-  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You have an idea for a recipe, but aren’t sure it is a good fit for the Cookbook.</p><h3 id="-solution">Solution</h3><p>Read existing cookbook solutions and compare them to yours. You may also want to borrow or buy a cookbook-style
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You have an idea for a recipe, but aren’t sure it is a good fit for the Cookbook.</p><h3 id="-solution">Solution</h3><p>Read existing cookbook solutions and compare them to yours. You may also want to borrow or buy a cookbook-style
 book for another technology to better understand the format.</p><p>Cookbook recipes are usually quick answers to focused questions. Your recipe should be narrowly tailored to
 solve a single problem.</p><h3 id="-discussion">Discussion</h3><p>The Cookbook format best serves beginners who have a basic knowledge of Ember.js and have ideally completed a
 small application of their own. Recipes in the Cookbook should teach intermediate and advanced topics, or present
@@ -220,8 +219,9 @@ recipe should cover.</p><p>A good recipe solves a single problem. Topics like �
 moment.js” make great recipes. Broader topics like “Building an Ember application with Node.js” or “Creating a GridView
 with sortable fields and search” are not. If your topic is too big, consider breaking it into multiple recipes (e.g.
 “Organizing an Ember application,” “Responding to user events,” “Connecting to remote data”).</p></div>
-	
-	<div class="footer">
+  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/contributing/deciding_if_a_recipe_is_a_good_fit.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/contributing/deciding_if_a_recipe_is_a_good_fit.md">  <span class="fa fa-pencil"> Edit</span>
+  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
+  	<div class="footer content">
 		<div class="row">
 			<div class="col-xs-12">	
 				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
@@ -233,13 +233,8 @@ with sortable fields and search” are not. If your topic is too big, consider b
 			</div>
 		</div>
 	</div>
-  </div>
-  <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/contributing/deciding_if_a_recipe_is_a_good_fit.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/contributing/deciding_if_a_recipe_is_a_good_fit.md">
-    <span class="fa fa-pencil"> Edit</span>
-  </a><!-- end ngIf: docbaseOptions.method == 'github' -->
-</div><!-- end ngIf: !index -->
-<!-- ngIf: index -->
 </div>
+<!-- ngIf: index --></div>
 
  <script type="text/javascript" src="./docbase-config.js"></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>
