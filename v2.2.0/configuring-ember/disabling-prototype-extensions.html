@@ -130,7 +130,7 @@
 
     <ul class="nav navbar-nav navbar-right">
        <li class="dropdown search-dropdown">
-        <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><span class="twitter-typeahead" style="position: relative; display: inline-block; "><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" style="position: absolute; top: 0px; left: 0px; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size:  ; background-position: 0% 0%; background-repeat: repeat repeat; " readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent; "><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none; "></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; "><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
+        <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
       </li>
       <li class="dropdown">
         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -158,7 +158,8 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-life-without-prototype-extension-item" class="level-2"><a id="-life-without-prototype-extension-link" href="./v2.2.0/configuring-ember/disabling-prototype-extensions.html#-life-without-prototype-extension" class="level-2" pref="#-life-without-prototype-extension">Life Without Prototype Extension</a><ul class="level-3" id="-life-without-prototype-extension-list"><li id="-life-without-prototype-extension-arrays-item" class="level-3"><a id="-life-without-prototype-extension-arrays-link" href="./v2.2.0/configuring-ember/disabling-prototype-extensions.html#-life-without-prototype-extension-arrays" class="level-3" pref="#-life-without-prototype-extension-arrays">Arrays</a></li><li id="-life-without-prototype-extension-strings-item" class="level-3"><a id="-life-without-prototype-extension-strings-link" href="./v2.2.0/configuring-ember/disabling-prototype-extensions.html#-life-without-prototype-extension-strings" class="level-3" pref="#-life-without-prototype-extension-strings">Strings</a></li><li id="-life-without-prototype-extension-functions-item" class="level-3"><a id="-life-without-prototype-extension-functions-link" href="./v2.2.0/configuring-ember/disabling-prototype-extensions.html#-life-without-prototype-extension-functions" class="level-3" pref="#-life-without-prototype-extension-functions">Functions</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>By default, Ember.js will extend the prototypes of native JavaScript
+  <div class="content">
+  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>By default, Ember.js will extend the prototypes of native JavaScript
 objects in the following ways:</p><ul>
 <li><p><code>Array</code> is extended to implement the <code>Ember.Enumerable</code>,
 <code>Ember.MutableEnumerable</code>, <code>Ember.MutableArray</code> and <code>Ember.Array</code>
@@ -252,6 +253,20 @@ doStuffWhenInserted</span><span class="pun">:</span><span class="pln"> </span><s
 doStuffWhenInserted</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Ember</span><span class="pun">.</span><span class="pln">on</span><span class="pun">(</span><span class="str">'</span></span><span class="str">didInsertElement'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
   </span><span class="com">/* awesome sauce */</span><span class="pln">
 </span><span class="pun">});</span></code></pre></div>
+	
+	<div class="footer">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v2.2.0/configuring-ember/debugging.html class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v2.2.0/configuring-ember/embedding-applications.html class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
+  </div>
   <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/configuring-ember/disabling-prototype-extensions.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/configuring-ember/disabling-prototype-extensions.md">
     <span class="fa fa-pencil"> Edit</span>
   </a><!-- end ngIf: docbaseOptions.method == 'github' -->

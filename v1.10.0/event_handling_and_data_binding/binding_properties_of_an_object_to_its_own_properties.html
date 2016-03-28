@@ -210,7 +210,8 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-problem-item" class="level-3"><a id="-problem-link" href="./v1.10.0/event_handling_and_data_binding/binding_properties_of_an_object_to_its_own_properties.html#-problem" class="level-3" pref="#-problem">Problem</a></li></ul></li><li id="-solution-item" class="level-3"><a id="-solution-link" href="./v1.10.0/event_handling_and_data_binding/binding_properties_of_an_object_to_its_own_properties.html#-solution" class="level-3" pref="#-solution">Solution</a></li><li id="-discussion-item" class="level-3"><a id="-discussion-link" href="./v1.10.0/event_handling_and_data_binding/binding_properties_of_an_object_to_its_own_properties.html#-discussion" class="level-3" pref="#-discussion">Discussion</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You want to base the value of one property on the value of another property.</p><h3 id="-solution">Solution</h3><p>Use one of the computed property macros like <code>Ember.computed.alias</code> or <code>Ember.computed.gte</code></p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="typ">App</span><span class="pun">.</span><span class="typ">Person</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Ember</span><span class="pun">.</span><span class="typ">Object</span><span class="pun">.</span><span class="pln">extend</span><span class="pun">({</span><span class="pln">
+  <div class="content">
+  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><h3 id="-problem">Problem</h3><p>You want to base the value of one property on the value of another property.</p><h3 id="-solution">Solution</h3><p>Use one of the computed property macros like <code>Ember.computed.alias</code> or <code>Ember.computed.gte</code></p><pre><code class="lang-js prettyprint prettyprinted" style=""><span class="typ">App</span><span class="pun">.</span><span class="typ">Person</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Ember</span><span class="pun">.</span><span class="typ">Object</span><span class="pun">.</span><span class="pln">extend</span><span class="pun">({</span><span class="pln">
     firstName </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
     lastName </span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">
     surname </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Ember</span><span class="pun">.</span><span class="pln">computed</span><span class="pun">.</span><span class="pln">alias</span><span class="pun">(</span><span class="string"><span class="str">"lastName"</span></span><span class="pun">),</span><span class="pln">
@@ -219,6 +220,20 @@
 on the values of other properties, correctly connecting them with bindings so they remain
 updated when values change. These all are stored on the <code>Ember.computed</code> object
 and <a href="http://emberjs.com/api/#method_computed">documented in the API documentation</a></p><h4>Example</h4><p><a class="jsbin-embed" href="http://emberjs.jsbin.com/AfufoSO/3/edit?output">JS Bin</a></p></div>
+	
+	<div class="footer">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v1.10.0/contributing/understanding_the_cookbook_format.html class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v1.10.0/event_handling_and_data_binding/responding_to_user_events.html class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
+  </div>
   <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/event_handling_and_data_binding/binding_properties_of_an_object_to_its_own_properties.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/event_handling_and_data_binding/binding_properties_of_an_object_to_its_own_properties.md">
     <span class="fa fa-pencil"> Edit</span>
   </a><!-- end ngIf: docbaseOptions.method == 'github' -->

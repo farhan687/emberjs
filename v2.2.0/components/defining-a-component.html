@@ -158,7 +158,8 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-defining-a-component-subclass-item" class="level-2"><a id="-defining-a-component-subclass-link" href="./v2.2.0/components/defining-a-component.html#-defining-a-component-subclass" class="level-2" pref="#-defining-a-component-subclass">Defining a Component Subclass</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-dynamically-rendering-a-component-item" class="level-2"><a id="-dynamically-rendering-a-component-link" href="./v2.2.0/components/defining-a-component.html#-dynamically-rendering-a-component" class="level-2" pref="#-dynamically-rendering-a-component">Dynamically rendering a component</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>To define a component, run:</p><pre><code class="lang-shell prettyprint prettyprinted" style=""><span class="pln">ember generate component </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">component</span><span class="pun">-</span><span class="pln">name</span></code></pre><p>Components must have at least one dash in their name. So <code>blog-post</code> is an acceptable
+  <div class="content">
+  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>To define a component, run:</p><pre><code class="lang-shell prettyprint prettyprinted" style=""><span class="pln">ember generate component </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">component</span><span class="pun">-</span><span class="pln">name</span></code></pre><p>Components must have at least one dash in their name. So <code>blog-post</code> is an acceptable
 name, and so is <code>audio-player-controls</code>, but <code>post</code> is not. This prevents clashes with
 current or future HTML element names, aligns Ember components with the W3C <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html">Custom
 Elements</a>
@@ -212,6 +213,20 @@ the helper renders nothing. When the parameter changes, the currently rendered
 component is destroyed and the new component is created and brought in.</p><p>Picking different components to render in response to the data allows you to
 have different template and behavior for each case. The <code>{{component}}</code> helper
 is a powerful tool for improving code modularity.</p></div>
+	
+	<div class="footer">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v2.2.0/components/customizing-a-components-element.html class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v2.2.0/components/handling-events.html class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
+  </div>
   <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/components/defining-a-component.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.2.0/components/defining-a-component.md">
     <span class="fa fa-pencil"> Edit</span>
   </a><!-- end ngIf: docbaseOptions.method == 'github' -->

@@ -183,7 +183,8 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-history-item" class="level-2"><a id="-history-link" href="./v2.0.0/configuring-ember/specifying-url-type.html#-history" class="level-2" pref="#-history">history</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-hash-item" class="level-2"><a id="-hash-link" href="./v2.0.0/configuring-ember/specifying-url-type.html#-hash" class="level-2" pref="#-hash">hash</a></li></ul></li><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="-none-item" class="level-2"><a id="-none-link" href="./v2.0.0/configuring-ember/specifying-url-type.html#-none" class="level-2" pref="#-none">none</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>The Ember router has four options to manage your application’s URL:  <code>history</code>,
+  <div class="content">
+  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>The Ember router has four options to manage your application’s URL:  <code>history</code>,
 which uses the HTML5 History API; <code>hash</code>, which uses anchor-based URLs; <code>auto</code>,
 which uses <code>history</code> if supported by the user’s browser, and falls back to
 <code>hash</code> otherwise; and <code>none</code>, which doesn’t update the URL. By default, Ember
@@ -206,6 +207,20 @@ at all, you can disable the location API entirely by setting <code>ENV.locationT
 to <code>none</code>. This is useful for
 testing, or when you don’t want Ember to muck with the URL (for example when you embed your
 application in a larger page).</p></div>
+	
+	<div class="footer">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v2.0.0/configuring-ember/feature-flags.html class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v2.0.0/contributing/adding-new-features.html class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
+  </div>
   <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/specifying-url-type.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/configuring-ember/specifying-url-type.md">
     <span class="fa fa-pencil"> Edit</span>
   </a><!-- end ngIf: docbaseOptions.method == 'github' -->

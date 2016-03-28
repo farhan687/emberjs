@@ -183,7 +183,8 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-promise-states-and-filtering-item" class="level-3"><a id="-promise-states-and-filtering-link" href="./v2.0.0/ember-inspector/promises.html#-promise-states-and-filtering" class="level-3" pref="#-promise-states-and-filtering">Promise States and Filtering</a></li></ul></li><li id="-inspecting-settled-values-item" class="level-3"><a id="-inspecting-settled-values-link" href="./v2.0.0/ember-inspector/promises.html#-inspecting-settled-values" class="level-3" pref="#-inspecting-settled-values">Inspecting Settled Values</a></li><li id="-tracing-item" class="level-3"><a id="-tracing-link" href="./v2.0.0/ember-inspector/promises.html#-tracing" class="level-3" pref="#-tracing">Tracing</a></li><li id="-labeling-promises-item" class="level-3"><a id="-labeling-promises-link" href="./v2.0.0/ember-inspector/promises.html#-labeling-promises" class="level-3" pref="#-labeling-promises">Labeling Promises</a></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>The Inspector provides a way to look at all Promises created
+  <div class="content">
+  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>The Inspector provides a way to look at all Promises created
 in your application. Click on the <code>Promises</code> menu to start inspecting them.</p><p><img src="../../images/guides/ember-inspector/promises-screenshot.png" width="680"></p><p>You can see a hierarchical list of Promises with labels describing each
 Promise, its state, its settled value, and the time it took to
 settle.</p><h3 id="-promise-states-and-filtering">Promise States and Filtering</h3><p>Promises have different colors based on their state.</p><p><img src="../../images/guides/ember-inspector/promises-fulfilled.png" width="300"></p><p><img src="../../images/guides/ember-inspector/promises-pending.png" width="300"></p><p><img src="../../images/guides/ember-inspector/promises-rejected.png" width="300"></p><p>You can filter by clicking on the following pills: <code>Rejected</code>, <code>Pending</code>, <code>Fulfilled</code>.</p><p><img src="../../images/guides/ember-inspector/promises-toolbar.png" width="600"></p><p>You can also search for Promises by typing a query in the search box.</p><p>To clear the currently logged Promises, click on the clear icon on the
@@ -213,6 +214,20 @@ promise</span><span class="pun">.</span><span class="pln">then</span><span class
 promise</span><span class="pun">.</span><span class="kwd">catch</span><span class="pun">(</span><span class="pln">callback</span><span class="pun">,</span><span class="pln"> label</span><span class="pun">);</span><span class="pln">
 
 promise</span><span class="pun">.</span><span class="pln">finally</span><span class="pun">(</span><span class="pln">callback</span><span class="pun">,</span><span class="pln"> label</span><span class="pun">);</span></code></pre></div>
+	
+	<div class="footer">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v2.0.0/ember-inspector/object-inspector.html class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v2.0.0/ember-inspector/render-performance.html class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
+  </div>
   <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/promises.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v2.0.0/ember-inspector/promises.md">
     <span class="fa fa-pencil"> Edit</span>
   </a><!-- end ngIf: docbaseOptions.method == 'github' -->

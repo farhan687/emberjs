@@ -210,7 +210,8 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>By default a component does not have access to properties in the
+  <div class="content">
+  	<div role="flatdoc-content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div></div><div class="clearFix"></div><p>By default a component does not have access to properties in the
 template scope in which it is used.</p><p>For example, imagine you have a <code>blog-post</code> component that is used to
 display a blog post:</p><pre><code class="lang-handlebars prettyprint prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="string"><span class="atv">"text/x-handlebars"</span></span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="string"><span class="atv">"components/blog-post"</span></span><span class="tag">&gt;</span><span class="pln">
   </span><span class="pun">&lt;</span><span class="pln">h</span><span class="number"><span class="pln">1</span></span><span class="pun">&gt;</span><span class="typ">Component</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{{</span><span class="pln">title</span><span class="pun">}}&lt;/</span><span class="pln">h</span><span class="number"><span class="pln">1</span></span><span class="pun">&gt;</span><span class="pln">
@@ -239,6 +240,20 @@ how they stay in sync.</p><p><iframe class="" id="" style="border-top-width: 1px
 create a component for each item and bind it to each model in the loop.</p><pre><code class="lang-handlebars prettyprint prettyprinted" style=""><span class="pun">{{</span><span class="comment"><span class="pun">#</span><span class="pln">each post </span><span class="kwd">in</span><span class="pln"> model</span><span class="pun">}}</span></span><span class="pln">
   </span><span class="pun">{{</span><span class="pln">blog</span><span class="pun">-</span><span class="pln">post title</span><span class="pun">=</span><span class="pln">post</span><span class="pun">.</span><span class="pln">title</span><span class="pun">}}</span><span class="pln">
 </span><span class="pun">{{/</span><span class="pln">each</span><span class="pun">}}</span></code></pre><p><iframe class="" id="" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(170, 170, 170); border-right-color: rgb(170, 170, 170); border-bottom-color: rgb(170, 170, 170); border-left-color: rgb(170, 170, 170); width: 100%; min-height: 300px; " data-url="http://jsbin.com/yexeyi/embed?live" src="https://jsbin.com/embed-holding"></iframe></p><script src="http://static.jsbin.com/js/embed.js"></script></div>
+	
+	<div class="footer">
+		<div class="row">
+			<div class="col-xs-12">	
+				<span data-ng-class="{disabled: paginationLinks.prev == null}" class="pull-left">
+					<a href=./v1.10.0/components/handling-user-interaction-with-actions.html class="paginationLink pull-left">Previous</a>
+				</span>
+				<span data-ng-class="{disabled: paginationLinks.next == null}" class="pull-right">
+					<a href=./v1.10.0/components/sending-actions-from-components-to-your-application.html class="paginationLink pull-right">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
+  </div>
   <!-- ngIf: docbaseOptions.method == 'github' --><a data-ng-if="docbaseOptions.method == 'github'" class="edit ng-scope" ng-href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/components/passing-properties-to-a-component.md" target="_blank" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/components/passing-properties-to-a-component.md">
     <span class="fa fa-pencil"> Edit</span>
   </a><!-- end ngIf: docbaseOptions.method == 'github' -->
