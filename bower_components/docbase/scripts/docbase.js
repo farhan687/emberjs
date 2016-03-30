@@ -479,6 +479,9 @@
       $scope.logoSrc = Docbase.options.logoSrc;
       $scope.docbaseOptions = Docbase.options;
 
+      setTimeout(function(){
+        $('#folder-navbar').megaMenu();
+      },200);
 
       function versionIn(folder) {
         if (folder.name === data.currentFolder) {
@@ -536,9 +539,8 @@
             }
           }
           var contributors_header = $('<div>').addClass('contributors_header').append('Contributors').append(last_date);
-          $(extra_container).prepend(contributors).prepend(contributors_header);
-
-
+          var contributors_footer = $('<div>').addClass('contributors_header nobg').append("<a class='edit-btn' href='"+$scope.github+"' target='_blank'><span class='fa fa-pencil'> Edit this page on Github </span></a>");
+          $(extra_container).prepend(contributors_footer).prepend(contributors).prepend(contributors_header);
         }
 
         var div2 = $('<div>').addClass('clearFix');
@@ -566,7 +568,12 @@
           $rootScope.logoSrc = Docbase.options.logoSrc;
           $scope.map = Docbase.map;
           $scope.versions = Object.keys($scope.map);
-          $scope.currentVersion = $scope.versions[0];
+          $scope.currentVersion = $scope.docbaseOptions.default_version && $scope.docbaseOptions.default_version !== null ? $scope.docbaseOptions.default_version: $scope.versions[0];
+          
+          setTimeout(function(){
+            $('#folder-navbar').megaMenu();
+          },200);
+
         });
       };
       if (Docbase.map) {
@@ -597,6 +604,9 @@
           $scope.map = Docbase.map;
           $scope.versions = Object.keys($scope.map);
           $scope.currentVersion = $route.current.params.version;
+          setTimeout(function(){
+            $('#folder-navbar').megaMenu();
+          },200);
         });
       };
       if (Docbase.map) {
