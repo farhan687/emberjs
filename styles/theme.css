@@ -1,0 +1,23 @@
+.landing, .button, .navbar-fixed-top {
+	background-color: #dd6a58;
+}
+.index-container li a, .menu a, .menu a:visited, .navbar-default .navbar-nav>li>a:active, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, a, ul.nav li.dropdown:hover>a {
+	color: #dd6a58;
+}
+a:active, a:hover, .menu a:hover{
+	color: #dd6a58;	
+}
+ .tt-menu:before {
+ 	border-bottom-color: #dd6a58;
+ } 
+.paginationLink {
+	border-color: #dd6a58;
+}
+.paginationLink:hover {
+	background: #dd6a58;
+	border-color: #dd6a58;
+}
+.megamenu> li > ul > li.dropdown-header > a {
+  color: #dd6a58;
+  border-bottom-color: #dd6a58;
+}
