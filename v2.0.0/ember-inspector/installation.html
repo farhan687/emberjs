@@ -33,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbar-collapse">
     <div class="pull-left  hidden-xs" id="folder-navbar">
       <ul class="nav navbar-nav folder-li">
-        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+        <!-- ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
           <a ng-href=./v2.0.0/addons-and-dependencies/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="addons-and-dependencies" href=./v2.0.0/addons-and-dependencies/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">addons-and-dependencies</span>
            </a>
@@ -44,7 +44,7 @@
               <a ng-href=./v2.0.0/addons-and-dependencies/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v2.0.0/addons-and-dependencies/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
           <a ng-href=./v2.0.0/applications/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="applications" href=./v2.0.0/applications/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">applications</span>
            </a>
@@ -63,7 +63,7 @@
               <a ng-href=./v2.0.0/applications/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v2.0.0/applications/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
           <a ng-href=./v2.0.0/components/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="components" href=./v2.0.0/components/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">components</span>
            </a>
@@ -84,7 +84,7 @@
               <a ng-href=./v2.0.0/components/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v2.0.0/components/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
           <a ng-href=./v2.0.0/configuring-ember/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="configuring-ember" href=./v2.0.0/configuring-ember/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">configuring-ember</span>
            </a>
@@ -107,7 +107,7 @@
               <a ng-href=./v2.0.0/configuring-ember/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v2.0.0/configuring-ember/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
           <a ng-href=./v2.0.0/contributing/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="contributing" href=./v2.0.0/contributing/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">contributing</span>
            </a>
@@ -120,7 +120,7 @@
               <a ng-href=./v2.0.0/contributing/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v2.0.0/contributing/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
           <a ng-href=./v2.0.0/controllers/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="controllers" href=./v2.0.0/controllers/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">controllers</span>
            </a>
@@ -133,7 +133,7 @@
               <a ng-href=./v2.0.0/controllers/index.html title="index" ng-bind="file.label" class="ng-binding" href=./v2.0.0/controllers/index.html>index</a>
             </li><!-- end ngRepeat: file in folder.files -->
           </ul>
-        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]" style="display: none; ">
+        </li><!-- end ngRepeat: folder in map[currentVersion] --><li class="dropdown ng-scope" ng-repeat="folder in map[currentVersion]">
           <a ng-href=./v2.0.0/ember-inspector/index.html class="dropdown-toggle map_folder" data-toggle="dropdown" role="button" aria-expanded="false" title="ember-inspector" href=./v2.0.0/ember-inspector/index.html>
             <span ng-bind="folder.label" class="link-restrict ng-binding">ember-inspector</span>
            </a>
@@ -166,7 +166,7 @@
           </ul>
         </li><!-- end ngRepeat: folder in map[currentVersion] -->
       </ul>
-      <ul class="nav navbar-nav category-li" style="display: block; ">
+      <ul class="nav navbar-nav category-li">
         <li class="dropdown menu-large">
           <a class="dropdown-toggle pointer" data-toggle="dropdown">more <b class="caret"></b></a>
           <ul class="dropdown-menu megamenu row">
@@ -309,7 +309,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><input class="search_field form-control dropdown-toggle appbase-search" type="text" placeholder="search"></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
