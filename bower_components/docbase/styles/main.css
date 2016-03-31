@@ -355,7 +355,15 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
     height: 100%;
     z-index: 2;
 }
-
+.link-restrict {
+  line-height: 20px;
+  max-height: 20px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+}
 /*Megamenu style*/
 .menu-large {
   position: static !important;
@@ -436,5 +444,12 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
   }
   .navbar-nav .open .dropdown-menu .dropdown-header{
     color:#fff;
+  }
+  .github-star {
+    margin: 0;
+    padding: 10px 0;
+  }
+  .dropdown-header {
+    padding: 3px 0;
   }
 }
