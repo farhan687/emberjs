@@ -545,7 +545,7 @@
         if (commits.status == 200 && commits.data && commits.data.length) {
           var commits_data = commits.data;
           var commiter_data = $filter('date')(commits.data[0].commit.committer.date, 'mediumDate');
-          var last_date = $('<span>').addClass('pull-right modified-date').html('Last Modified On : <a href="' + commits.data[0].html_url + '">' + commiter_data + '</a>');
+          var last_date = $('<span>').addClass('pull-right modified-date').html('Last modified on: <a href="' + commits.data[0].html_url + '">' + commiter_data + '</a>');
 
           var contributors_data = commits_data;
           var contributors = $('<div>').addClass('contributor-container');
@@ -905,6 +905,7 @@
     );
 })(window.jQuery, window.angular, window.docbaseConfig);
 
+
 // FILE: scripts/flatdoc-theme.js
 /**
  * Official flatdoc theme
@@ -1170,7 +1171,18 @@
 				$('.folder-li li.dropdown').show();
 				$('.category-li').hide();
 			}
+			if(total_width < 768) {
+				adjust_searchbar();
+			}
 		}
+
+		function adjust_searchbar() {
+			var total_width = $(window).width();
+			var search_width = 300;
+			var right_margin = parseInt((total_width - search_width)/2);
+			$('.search-form').css('right', right_margin+'px');
+		}
+
 		menu_set();
 		$(window).resize(menu_set);
 	};

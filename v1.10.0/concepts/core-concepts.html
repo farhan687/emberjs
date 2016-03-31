@@ -367,7 +367,7 @@
     <div class="pull-right" id="other-navs">
       <ul class="nav navbar-nav navbar-right">
          <li class="dropdown search-dropdown">
-          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}"><span class="twitter-typeahead" style="position: relative; display: inline-block; "><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" style="position: absolute; top: 0px; left: 0px; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size:  ; background-position: 0% 0%; background-repeat: repeat repeat; " readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent; "><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none; "></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; "><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
+          <div class="form-group search-form" data-ng-class="{'open-in':search.length &gt; 0}" style="right: 50px; "><span class="twitter-typeahead" style="position: relative; display: inline-block; "><input class="search_field form-control dropdown-toggle appbase-search tt-hint" type="text" style="position: absolute; top: 0px; left: 0px; border-top-color: transparent; border-right-color: transparent; border-bottom-color: transparent; border-left-color: transparent; box-shadow: none; opacity: 1; background-attachment: scroll; background-clip: border-box; background-color: rgb(255, 255, 255); background-image: none; background-origin: padding-box; background-size:  ; background-position: 0% 0%; background-repeat: repeat repeat; " readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr"><input class="search_field form-control dropdown-toggle appbase-search tt-input" type="text" placeholder="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent; "><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: 'Helvetica Neue', 'Open Sans', sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none; "></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none; "><div class="tt-dataset tt-dataset-titles"></div></div></span></div>
         </li>
         <li class="dropdown  hidden-xs">
           <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -589,7 +589,7 @@
   <div class="menubar fixed">
     <div class="menu section" role="flatdoc-menu"><ul><li id="root-item" class="level-0"><ul class="level-1" id="root-list"><li id="root-item" class="level-1"><ul class="level-2" id="root-list"><li id="root-item" class="level-2"><ul class="level-3" id="root-list"><li id="-concepts-item" class="level-3"><a id="-concepts-link" href="./v1.10.0/concepts/core-concepts.html#-concepts" class="level-3" pref="#-concepts">Concepts</a></li></ul></li></ul></li></ul></li></ul></div>
   </div>
-  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last Modified On : <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/concepts/core-concepts.md" target="_blank"><span class="fa fa-pencil"> Edit this page on Github </span></a></div></div><div class="clearFix"></div><p>To get started with Ember.js, there are a few core concepts you
+  <div role="flatdoc-content" class="content"><div class="extra_container"><div class="contributors_header">Contributors<span class="pull-right modified-date">Last modified on: <a href="https://github.com/farhan687/emberjs/commit/8d7fa53e1922d88ad563c8db3b99f4bbbbabb43b">Mar 25, 2016</a></span></div><div class="contributor-container"><a class="contributor" href="https://github.com/farhan687" title="farhan687" target="_blank"><img class="contributor_img img-rounded" src="https://avatars.githubusercontent.com/u/6059027?v=3" alt="farhan687"></a></div><div class="contributors_header nobg"><a class="edit-btn" href="https://github.com/farhan687/emberjs/tree/master/source/v1.10.0/concepts/core-concepts.md" target="_blank"><span class="fa fa-pencil"> Edit this page on Github </span></a></div></div><div class="clearFix"></div><p>To get started with Ember.js, there are a few core concepts you
 should understand. </p><p>Ember.js is designed to help developers build ambitiously large web
 applications that are competitive with native apps. Doing so requires
 both new tools and a new vocabulary of concepts. We’ve spent a lot of
@@ -603,7 +603,7 @@ superior shareability and collaboration. Today, most JavaScript
 frameworks treat the URL as an afterthought, instead of the primary
 reason for the web’s success.</p><p>Ember.js, therefore, marries the tools and concepts of native
 GUI frameworks with support for the feature that makes the web so
-powerful: the URL.</p><h3 id="-concepts">Concepts</h3><h4>Templates</h4><p>A <strong>template</strong>, written in the Handlebars templating language, describes
+powerful: the URL.</p><h3 id="-concepts">Concepts</h3><h4 id="templates">Templates</h4><p>A <strong>template</strong>, written in the Handlebars templating language, describes
 the user interface of your application. Each template is backed by a
 model, and the template automatically updates itself if the model changes.</p><p>In addition to plain HTML, templates can contain:</p><ul>
 <li><strong>Expressions</strong>, like <code>{{firstName}}</code>, which take information from
@@ -614,19 +614,19 @@ outlet by the router. You can put outlets into your template using the
 <code>{{outlet}}</code> helper.</li>
 <li><strong>Components</strong>, custom HTML elements that you can use to clean up
 repetitive templates or create reusable controls.</li>
-</ul><h4>Router</h4><p>The <strong>router</strong> translates a URL into a series of nested templates, each
+</ul><h4 id="router">Router</h4><p>The <strong>router</strong> translates a URL into a series of nested templates, each
 backed by a model. As the templates or models being shown to the user
 change, Ember automatically keeps the URL in the browser’s address bar
 up-to-date.</p><p>This means that, at any point, users are able to share the URL of your
 app. When someone clicks the link, they reliably see the same content as
-the original user.</p><h4>Components</h4><p>A <strong>component</strong> is a custom HTML tag whose behavior you implement using
+the original user.</p><h4 id="components">Components</h4><p>A <strong>component</strong> is a custom HTML tag whose behavior you implement using
 JavaScript and whose appearance you describe using Handlebars templates.
 They allow you to create reusable controls that can simplify your
-application’s templates.</p><h4>Models</h4><p>A <strong>model</strong> is an object that stores <em>persistent state</em>. Templates are
+application’s templates.</p><h4 id="models">Models</h4><p>A <strong>model</strong> is an object that stores <em>persistent state</em>. Templates are
 responsible for displaying the model to the user by turning it into
 HTML. In many applications, models are loaded via an HTTP JSON API,
-although Ember is agnostic to the backend that you choose.</p><h4>Route</h4><p>A <strong>route</strong> is an object that tells the template which model it should
-display.</p><h4>Controllers</h4><p>A <strong>controller</strong> is an object that stores <em>application state</em>. A
+although Ember is agnostic to the backend that you choose.</p><h4 id="route">Route</h4><p>A <strong>route</strong> is an object that tells the template which model it should
+display.</p><h4 id="controllers">Controllers</h4><p>A <strong>controller</strong> is an object that stores <em>application state</em>. A
 template can optionally have a controller in addition to a model, and
 can retrieve properties from both.</p><hr><p>These are the core concepts you’ll need to understand as you develop
 your Ember.js app. They are designed to scale up in complexity, so that
